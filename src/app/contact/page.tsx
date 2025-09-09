@@ -294,10 +294,17 @@ export default function Contact() {
                         </div>
 
                         <div>
-                            <h3 className="text-lg font-semibold text-gray-800 mb-2">Professional Development</h3>
-                            <p className="text-gray-600 mb-2">2023 - Gestion de base</p>
-                            <p className="text-sm text-gray-500">Athénée Royal Vielsalm-Manhay, Belgium</p>
-                            <p className="text-sm text-gray-500 mt-2">Focus: Entrepreneurship, Communication, Teamwork, Organization</p>
+                            <h3 className="text-lg font-semibold text-[#0A2540] mb-4">Professional Development</h3>
+                            <div className="border-l-4 border-cyan-500 pl-6">
+                                <div className="flex items-center mb-2">
+                                    <div className="w-3 h-3 bg-cyan-500 rounded-full mr-3"></div>
+                                    <span className="text-sm font-medium text-cyan-600">2022 - 2023</span>
+                                </div>
+                                <h4 className="text-lg font-semibold text-[#0A2540]">Gestion de base</h4>
+                                <p className="text-gray-600">Professional Development Course</p>
+                                <p className="text-sm text-gray-500">Athénée Royal Vielsalm-Manhay, Belgium</p>
+                                <p className="text-sm text-gray-500 mt-2">Focus: Entrepreneurship, Communication, Teamwork, Organization</p>
+                            </div>
                         </div>
                     </div>
                 </div>
