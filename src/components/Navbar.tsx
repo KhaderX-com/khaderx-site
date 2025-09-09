@@ -7,7 +7,7 @@ interface NavbarProps {
 
 export default function Navbar({ className = '' }: NavbarProps) {
     return (
-        <nav className={`w-full bg-transparent backdrop-blur-md shadow-sm border-b border-white/20 ${className}`}>
+        <nav className={`fixed top-0 left-0 w-full bg-transparent backdrop-blur-md shadow-sm border-b border-white/20 z-50 ${className}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     {/* Logo */}
