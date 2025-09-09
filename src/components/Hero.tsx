@@ -31,7 +31,7 @@ export default function Hero({ className = '' }: HeroProps) {
 
             {/* Content overlay area - ready for text or other content */}
             <div className="absolute inset-0 flex items-center justify-start pl-4 md:pl-8 lg:pl-12">
-                <div className="text-left text-black z-10 w-4/5 md:w-2/5 lg:w-1/3">
+                <div className="text-left text-[#0A2540] z-10 w-4/5 md:w-2/5 lg:w-1/3">
                     <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
                         Engineering Tomorrow
                     </h1>
@@ -40,7 +40,7 @@ export default function Hero({ className = '' }: HeroProps) {
                         target="_blank"
                         rel="noopener noreferrer"
                         title="Visit KhaderX on GitHub"
-                        className="inline-block mt-6 p-3 md:p-4 bg-black text-white rounded-full hover:bg-gray-800 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/50 hover:scale-110"
+                        className="inline-block mt-6 p-3 md:p-4 bg-[#0A2540] text-white rounded-full hover:bg-gray-800 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/50 hover:scale-110"
                     >
                         <svg
                             className="w-6 h-6 md:w-8 md:h-8"
@@ -56,7 +56,7 @@ export default function Hero({ className = '' }: HeroProps) {
                         target="_blank"
                         rel="noopener noreferrer"
                         title="Connect with KhaderX on LinkedIn"
-                        className="inline-block ml-4 mt-6 p-3 md:p-4 bg-black text-white rounded-full hover:bg-gray-800 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/50 hover:scale-110"
+                        className="inline-block ml-4 mt-6 p-3 md:p-4 bg-[#0A2540] text-white rounded-full hover:bg-gray-800 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/50 hover:scale-110"
                     >
                         <svg
                             className="w-6 h-6 md:w-8 md:h-8"
@@ -70,7 +70,7 @@ export default function Hero({ className = '' }: HeroProps) {
                     <a
                         href="mailto:contact@khaderx.com"
                         title="Email KhaderX"
-                        className="inline-block ml-4 mt-6 p-3 md:p-4 bg-black text-white rounded-full hover:bg-gray-800 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/50 hover:scale-110"
+                        className="inline-block ml-4 mt-6 p-3 md:p-4 bg-[#0A2540] text-white rounded-full hover:bg-gray-800 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/50 hover:scale-110"
                     >
                         <svg
                             className="w-6 h-6 md:w-8 md:h-8"
