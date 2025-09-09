@@ -204,9 +204,9 @@ export default function Contact() {
                         <h2 className="text-2xl font-bold text-gray-800">Links & Profiles</h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         <a
-                            href="https://github.com/Khader20"
+                            href="https://github.com/KhaderX-com"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-cyan-50 transition-colors duration-300 group"
@@ -235,7 +235,7 @@ export default function Contact() {
                             </div>
                         </a>
 
-                        <a
+                        {/* <a
                             href="https://khaderabueltayef.blogspot.com/"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -248,7 +248,7 @@ export default function Contact() {
                                 <p className="font-medium text-gray-800 group-hover:text-cyan-700">Blog</p>
                                 <p className="text-sm text-gray-600">Articles & Thoughts</p>
                             </div>
-                        </a>
+                        </a> */}
 
                         <a
                             href="https://gravatar.com/voiddevotedlyf473f5471f"
