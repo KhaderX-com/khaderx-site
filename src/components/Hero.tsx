@@ -35,13 +35,6 @@ export default function Hero({ className = '' }: HeroProps) {
                     {/* Add your hero content here */}
                 </div>
             </div>
-
-            {/* Slogan under logo on the left */}
-            <div className="absolute left-4 top-20 md:top-24 z-20">
-                <p className="font-bold text-[#00C2FF] tracking-wide text-base sm:text-lg drop-shadow">
-                    Engineering Tomorrow.
-                </p>
-            </div>
         </section>
     );
 }
