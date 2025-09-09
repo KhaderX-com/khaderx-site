@@ -29,19 +29,19 @@ export default function Navbar({ className = '' }: NavbarProps) {
                         <div className="ml-10 flex items-baseline space-x-8">
                             <Link
                                 href="/about"
-                                className="text-[#0A2540] hover:text-[#00C2FF] px-3 py-2 text-sm font-medium transition-colors duration-200"
+                                className="text-[#0A2540] hover:text-[#00C2FF] px-3 py-2 text-sm font-bold transition-colors duration-200"
                             >
                                 About
                             </Link>
                             <Link
                                 href="/services"
-                                className="text-[#0A2540] hover:text-[#00C2FF] px-3 py-2 text-sm font-medium transition-colors duration-200"
+                                className="text-[#0A2540] hover:text-[#00C2FF] px-3 py-2 text-sm font-bold transition-colors duration-200"
                             >
                                 Services
                             </Link>
                             <Link
                                 href="/contact"
-                                className="text-[#0A2540] hover:text-[#00C2FF] px-3 py-2 text-sm font-medium transition-colors duration-200"
+                                className="text-[#0A2540] hover:text-[#00C2FF] px-3 py-2 text-sm font-bold transition-colors duration-200"
                             >
                                 Contact
                             </Link>
@@ -82,19 +82,19 @@ export default function Navbar({ className = '' }: NavbarProps) {
                 <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/20 backdrop-blur-md border-t border-white/20">
                     <Link
                         href="/about"
-                        className="text-[#0A2540] hover:text-[#00C2FF] block px-3 py-2 text-base font-medium transition-colors duration-200"
+                        className="text-[#0A2540] hover:text-[#00C2FF] block px-3 py-2 text-base font-bold transition-colors duration-200"
                     >
                         About
                     </Link>
                     <Link
                         href="/services"
-                        className="text-[#0A2540] hover:text-[#00C2FF] block px-3 py-2 text-base font-medium transition-colors duration-200"
+                        className="text-[#0A2540] hover:text-[#00C2FF] block px-3 py-2 text-base font-bold transition-colors duration-200"
                     >
                         Services
                     </Link>
                     <Link
                         href="/contact"
-                        className="text-[#0A2540] hover:text-[#00C2FF] block px-3 py-2 text-base font-medium transition-colors duration-200"
+                        className="text-[#0A2540] hover:text-[#00C2FF] block px-3 py-2 text-base font-bold transition-colors duration-200"
                     >
                         Contact
                     </Link>
