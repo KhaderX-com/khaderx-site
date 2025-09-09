@@ -108,6 +108,16 @@ export default function Contact() {
                         <div className="border-l-4 border-cyan-500 pl-6">
                             <div className="flex items-center mb-2">
                                 <div className="w-3 h-3 bg-cyan-500 rounded-full mr-3"></div>
+                                <span className="text-sm font-medium text-cyan-600">2025 - 2026 (Current)</span>
+                            </div>
+                            <h3 className="text-lg font-semibold text-[#0A2540]">Master in HEC Entrepreneurs</h3>
+                            <p className="text-gray-600">Entrepreneurship & Business Development</p>
+                            <p className="text-sm text-gray-500">University of Liège, HEC, Belgium</p>
+                        </div>
+
+                        <div className="border-l-4 border-cyan-500 pl-6">
+                            <div className="flex items-center mb-2">
+                                <div className="w-3 h-3 bg-cyan-500 rounded-full mr-3"></div>
                                 <span className="text-sm font-medium text-cyan-600">2023 - 2025</span>
                             </div>
                             <h3 className="text-lg font-semibold text-[#0A2540]">Master in Aerospace Engineering</h3>
