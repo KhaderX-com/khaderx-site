@@ -152,16 +152,16 @@ export default function Contact() {
                             <h3 className="text-lg font-semibold text-gray-800 mb-4">Programming</h3>
                             <div className="space-y-2">
                                 {[
-                                    'Python - Full Stack (Frontend & Backend)',
-                                    'Flutter - Dart (Mobile & Desktop Applications Development)',
-                                    'PowerShell/Bash Scripting',
+                                    '<strong>Python</strong> - Full Stack (Frontend & Backend)',
+                                    '<strong>Flutter - Dart</strong> (Mobile & Desktop Applications Development)',
+                                    '<strong>PowerShell/Bash</strong> Scripting',
                                     'C/C++ (Basic Knowledge)',
-                                    'HTML/CSS/JavaScript (Basic Knowledge)',
+                                    '<strong>HTML/CSS/JavaScript</strong> (Basic Knowledge)',
                                     'LaTeX (Document Preparation)'
                                 ].map((skill, index) => (
                                     <div key={index} className="flex items-center">
                                         <div className="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
-                                        <span className="text-gray-700">{skill}</span>
+                                        <span className="text-gray-700" dangerouslySetInnerHTML={{ __html: skill }}></span>
                                     </div>
                                 ))}
                             </div>
