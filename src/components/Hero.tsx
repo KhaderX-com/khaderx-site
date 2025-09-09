@@ -33,7 +33,7 @@ export default function Hero({ className = '' }: HeroProps) {
             <div className="absolute inset-0 flex items-center justify-start pl-4 md:pl-8 lg:pl-12">
                 <div className="text-left text-black z-10 w-4/5 md:w-2/5 lg:w-1/3">
                     <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                        Engineering Tomorrow.
+                        Engineering Tomorrow
                     </h1>
                 </div>
             </div>
