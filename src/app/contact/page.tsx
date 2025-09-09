@@ -155,7 +155,7 @@ export default function Contact() {
                                     '<strong>Python</strong> - Full Stack (Frontend & Backend)',
                                     '<strong>Flutter - Dart</strong> (Mobile & Desktop Applications Development)',
                                     '<strong>PowerShell/Bash</strong> Scripting',
-                                    'C/C++ (Basic Knowledge)',
+                                    '<strong>C/C++</strong> (Basic Knowledge)',
                                     '<strong>HTML/CSS/JavaScript</strong> (Basic Knowledge)',
                                     'LaTeX (Document Preparation)'
                                 ].map((skill, index) => (
