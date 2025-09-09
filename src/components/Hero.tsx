@@ -15,10 +15,10 @@ export default function Hero({ className = '' }: HeroProps) {
             {/* Hero Image */}
             <div className="relative w-full h-full">
                 <Image
-                    src="/images/hero/hero-airplane-cyan.png"
+                    src="/images/hero/hero-airplane-cyan.webp"
                     alt="Hero airplane"
                     fill
-                    className="object-contain object-center"
+                    className="object-cover object-center"
                     priority
                     quality={100}
                     unoptimized
