@@ -153,7 +153,7 @@ export default function Contact() {
                             <div className="space-y-2">
                                 {[
                                     'Python - Full Stack (Frontend & Backend)',
-                                    'Flutter - Dart (Mobile App Development)',
+                                    'Flutter - Dart (Mobile & Desktop Applications Development)',
                                     'PowerShell/Bash Scripting',
                                     'C/C++ (Basic Knowledge)',
                                     'HTML/CSS/JavaScript (Basic Knowledge)',
