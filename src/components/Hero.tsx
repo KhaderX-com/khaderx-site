@@ -18,9 +18,13 @@ export default function Hero({ className = '' }: HeroProps) {
                     src="/images/hero/hero-airplane-cyan.png"
                     alt="Hero airplane"
                     fill
-                    className="object-cover object-center"
+                    className="object-cover object-center hero-image"
                     priority
+                    quality={100}
                     sizes="100vw"
+                    style={{
+                        imageRendering: 'auto',
+                    }}
                 />
 
                 {/* Soft overlay gradient for better text readability if needed */}
