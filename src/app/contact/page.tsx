@@ -287,8 +287,8 @@ export default function Contact() {
 
                             <div>
                                 <h3 className="text-lg font-semibold text-gray-800 mb-2">PyPI Organization</h3>
-                                <p className="text-gray-600 mb-1"><strong>KX</strong> - Khader X</p>
-                                <p className="text-sm text-gray-500">All packages use &quot;kx_&quot; prefix</p>
+                                <p className="text-gray-600 mb-1"><a href="https://github.com/Khader-X" target="_blank" rel="noopener noreferrer" className="text-cyan-600 hover:text-cyan-700"><strong>KX</strong> - KhaderX</a></p>
+                                <p className="text-sm text-gray-500">All packages use &quot;<strong>kx_</strong>&quot; prefix</p>
                                 <p className="text-sm text-gray-500">Example: kx_publish-pypi</p>
                             </div>
                         </div>
@@ -301,7 +301,7 @@ export default function Contact() {
                                     <span className="text-sm font-medium text-cyan-600">2022 - 2023</span>
                                 </div>
                                 <h4 className="text-lg font-semibold text-[#0A2540]">Gestion de base</h4>
-                                <p className="text-gray-600">Professional Development Course</p>
+                                <p className="text-gray-600">Professional & Personal Development Course</p>
                                 <p className="text-sm text-gray-500">Athénée Royal Vielsalm-Manhay, Belgium</p>
                                 <p className="text-sm text-gray-500 mt-2">Focus: Entrepreneurship, Communication, Teamwork, Organization</p>
                             </div>
