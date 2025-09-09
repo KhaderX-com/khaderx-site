@@ -17,12 +17,6 @@ export default function Footer({ className = '' }: FooterProps) {
                     {/* Navigation Links */}
                     <div className="flex space-x-6">
                         <Link
-                            href="/about"
-                            className="text-gray-300 hover:text-white text-sm font-medium transition-colors duration-200"
-                        >
-                            About
-                        </Link>
-                        <Link
                             href="/services"
                             className="text-gray-300 hover:text-white text-sm font-medium transition-colors duration-200"
                         >
