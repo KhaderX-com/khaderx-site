@@ -15,7 +15,7 @@ export default function Hero({ className = '' }: HeroProps) {
             {/* Hero Image */}
             <div className="relative w-full h-full">
                 <Image
-                    src="/images/hero/hero-airplane-cyan.webp"
+                    src="/images/hero/hero-airplane-cyan-high-quality.png"
                     alt="Hero airplane"
                     fill
                     className="object-cover object-center"
