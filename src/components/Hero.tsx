@@ -30,9 +30,9 @@ export default function Hero({ className = '' }: HeroProps) {
             </div>
 
             {/* Content overlay area - ready for text or other content */}
-            <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center text-white z-10">
-                    {/* Add your hero content here */}
+            <div className="absolute inset-0 flex items-center justify-start pl-8">
+                <div className="text-left text-black z-10">
+                    <h1 className="text-6xl font-bold">Engineering Tomorrow.</h1>
                 </div>
             </div>
         </section>
