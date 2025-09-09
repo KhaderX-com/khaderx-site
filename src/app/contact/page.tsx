@@ -36,7 +36,7 @@ export default function Contact() {
                                 </svg>
                                 <div>
                                     <p className="font-semibold text-gray-800">ABUELTAYEF Khader</p>
-                                    <p className="text-gray-600">Aerospace Engineer & Python Developer</p>
+                                    <p className="text-gray-600">Aerospace & Aeronautical Engineer | Python & Flutter Developer</p>
                                 </div>
                             </div>
 
@@ -46,7 +46,7 @@ export default function Contact() {
                                 </svg>
                                 <div>
                                     <p className="text-gray-800">abueltayef.khader@gmail.com</p>
-                                    <p className="text-gray-600">abueltayef.khader.main@hotmail.com</p>
+                                    <p className="text-gray-600">abueltayef.khader@gmail.com</p>
                                 </div>
                             </div>
 
@@ -112,7 +112,7 @@ export default function Contact() {
                             </div>
                             <h3 className="text-lg font-semibold text-gray-800">Master in Aerospace Engineering</h3>
                             <p className="text-gray-600">Aerospace & Aeronautical Engineering</p>
-                            <p className="text-sm text-gray-500">ULIEGE, Belgium</p>
+                            <p className="text-sm text-gray-500">University of Liège, Belgium</p>
                         </div>
 
                         <div className="border-l-4 border-cyan-500 pl-6">
@@ -122,7 +122,7 @@ export default function Contact() {
                             </div>
                             <h3 className="text-lg font-semibold text-gray-800">Bachelor in Civil Engineering</h3>
                             <p className="text-gray-600">Obtained with Distinction</p>
-                            <p className="text-sm text-gray-500">ULIEGE, Belgium</p>
+                            <p className="text-sm text-gray-500">University of Liège, Belgium</p>
                         </div>
 
                         <div className="border-l-4 border-cyan-500 pl-6">
