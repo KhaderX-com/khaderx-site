@@ -157,7 +157,7 @@ export default function Contact() {
                                     '<strong>PowerShell/Bash</strong> Scripting',
                                     '<strong>C/C++</strong> (Basic Knowledge)',
                                     '<strong>HTML/CSS/JavaScript</strong> (Basic Knowledge)',
-                                    'LaTeX (Document Preparation)'
+                                    '<strong>LaTeX</strong> (Document Preparation)'
                                 ].map((skill, index) => (
                                     <div key={index} className="flex items-center">
                                         <div className="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
