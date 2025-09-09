@@ -27,10 +27,6 @@ body {
 
 /* Improve image rendering quality */
 img {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
   image-rendering: -webkit-optimize-contrast;
   image-rendering: auto;
 }
@@ -39,4 +35,15 @@ img {
 .hero-image {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: auto;
+  transform: none !important;
+  zoom: 1 !important;
+}
+
+/* Hero background without zoom/scaling */
+.hero-background {
+  background-image: url('/images/hero/hero-airplane-cyan.png');
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
 }
