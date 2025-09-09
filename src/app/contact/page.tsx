@@ -288,14 +288,14 @@ export default function Contact() {
                             <div>
                                 <h3 className="text-lg font-semibold text-gray-800 mb-2">PyPI Organization</h3>
                                 <p className="text-gray-600 mb-1"><strong>KHX</strong> - Khader X</p>
-                                <p className="text-sm text-gray-500">All packages use "khx_" prefix</p>
+                                <p className="text-sm text-gray-500">All packages use &quot;khx_&quot; prefix</p>
                                 <p className="text-sm text-gray-500">Example: khx_rich_console</p>
                             </div>
                         </div>
 
                         <div>
                             <h3 className="text-lg font-semibold text-gray-800 mb-2">Professional Development</h3>
-                            <p className="text-gray-600 mb-2">"Gestion de base" Course</p>
+                            <p className="text-gray-600 mb-2">&quot;Gestion de base&quot; Course</p>
                             <p className="text-sm text-gray-500">Athénée Royal Vielsalm-Manhay, Belgium</p>
                             <p className="text-sm text-gray-500 mt-2">Focus: Entrepreneurship, Communication, Teamwork, Organization</p>
                         </div>
