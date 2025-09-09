@@ -42,8 +42,10 @@ img {
 /* Hero background without zoom/scaling */
 .hero-background {
   background-image: url('/images/hero/hero-airplane-cyan.png');
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  background-attachment: fixed;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: auto;
 }
