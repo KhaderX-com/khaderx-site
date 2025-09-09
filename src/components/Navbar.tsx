@@ -14,7 +14,7 @@ export default function Navbar({ className = '' }: NavbarProps) {
                     <div className="flex-shrink-0">
                         <Link href="/" className="flex items-center">
                             <Image
-                                src="/images/logo/logo-3.png"
+                                src="/images/logo/logo-3-removebg-preview.png"
                                 alt="KhaderX Logo"
                                 width={120}
                                 height={40}
