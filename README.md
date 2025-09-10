@@ -1,7 +1,7 @@
 <div align="center">
   <img src="public/images/logo/logo-2.png" alt="KhaderX Logo" width="200" height="200" />
 
-  # KhaderX
+  # KhaderX - KX
 
   **Engineering Tomorrow**
 
