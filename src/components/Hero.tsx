@@ -82,12 +82,12 @@ export default function Hero({ className = '' }: HeroProps) {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
                     </a>
-                    <a
+                    {/* <a
                         href="#projects"
                         className="block mt-8 px-8 py-4 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold text-lg rounded-lg shadow-lg hover:shadow-xl hover:shadow-cyan-400/30 transition-all duration-300 hover:scale-105 text-center"
                     >
                         Explore My Projects
-                    </a>
+                    </a> */}
                 </div>
             </div>
         </section>
