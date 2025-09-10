@@ -17,16 +17,16 @@ export default function Footer({ className = '' }: FooterProps) {
                     {/* Navigation Links */}
                     <div className="flex space-x-6">
                         <Link
-                            href="/services"
-                            className="text-gray-300 hover:text-white text-sm font-medium transition-colors duration-200"
-                        >
-                            Services
-                        </Link>
-                        <Link
                             href="/projects"
                             className="text-gray-300 hover:text-white text-sm font-medium transition-colors duration-200"
                         >
                             Projects
+                        </Link>
+                        <Link
+                            href="/services"
+                            className="text-gray-300 hover:text-white text-sm font-medium transition-colors duration-200"
+                        >
+                            Services
                         </Link>
                         <Link
                             href="/contact"

@@ -28,16 +28,16 @@ export default function Navbar({ className = '' }: NavbarProps) {
                     <div className="hidden md:block">
                         <div className="ml-10 flex items-baseline space-x-8">
                             <Link
-                                href="/services"
-                                className="text-[#0A2540] hover:text-[#00C2FF] px-3 py-2 text-sm font-bold transition-colors duration-200"
-                            >
-                                Services
-                            </Link>
-                            <Link
                                 href="/projects"
                                 className="text-[#0A2540] hover:text-[#00C2FF] px-3 py-2 text-sm font-bold transition-colors duration-200"
                             >
                                 Projects
+                            </Link>
+                            <Link
+                                href="/services"
+                                className="text-[#0A2540] hover:text-[#00C2FF] px-3 py-2 text-sm font-bold transition-colors duration-200"
+                            >
+                                Services
                             </Link>
                             <Link
                                 href="/contact"
