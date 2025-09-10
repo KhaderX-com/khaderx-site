@@ -27,11 +27,11 @@ export default function Projects() {
                             Coming Soon...
                         </h2>
 
-                        <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                        {/* <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                             I&apos;m working on showcasing an exciting portfolio of projects that demonstrate my expertise in aerospace engineering and software development. Stay tuned for innovative solutions and technical achievements!
-                        </p>
+                        </p> */}
 
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <a
                                 href="/contact"
                                 className="inline-flex items-center px-6 py-3 bg-[#00C2FF] text-[#0A2540] font-semibold rounded-lg hover:bg-[#00A8E8] transition-colors duration-300"
@@ -51,10 +51,10 @@ export default function Projects() {
                                 </svg>
                                 Send Email
                             </a>
-                        </div>
+                        </div> */}
 
                         {/* Preview of upcoming projects */}
-                        <div className="mt-12 pt-8 border-t border-gray-200">
+                        {/* <div className="mt-12 pt-8 border-t border-gray-200">
                             <h3 className="text-xl font-semibold text-[#0A2540] mb-6">
                                 Project Categories
                             </h3>
@@ -80,7 +80,7 @@ export default function Projects() {
                                     <span className="text-gray-700">Web Development</span>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </main>
