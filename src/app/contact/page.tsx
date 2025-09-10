@@ -20,7 +20,7 @@ export default function Contact() {
                     <div className="flex justify-center mb-12">
                         <a
                             href="mailto:contact@khaderx.com"
-                            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300"
+                            className="inline-flex items-center px-8 py-4 bg-[#00C2FF] text-[#0A2540] font-semibold rounded-lg shadow-lg hover:bg-[#00A8E8] transform hover:scale-105 transition-all duration-300"
                         >
                             <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
