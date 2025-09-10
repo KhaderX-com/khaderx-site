@@ -27,12 +27,12 @@ export default function Services() {
                             Coming Soon
                         </h2>
 
-                        <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                        {/* <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                             I&apos;m currently developing a comprehensive range of services to help bring your projects to life.
                             From aerospace engineering consulting to custom software development, exciting offerings are on the way!
-                        </p>
+                        </p> */}
 
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <a
                                 href="/contact"
                                 className="inline-flex items-center px-6 py-3 bg-[#00C2FF] text-[#0A2540] font-semibold rounded-lg hover:bg-[#00A8E8] transition-colors duration-300"
@@ -52,10 +52,10 @@ export default function Services() {
                                 </svg>
                                 Send Email
                             </a>
-                        </div>
+                        </div> */}
 
                         {/* Preview of upcoming services */}
-                        <div className="mt-12 pt-8 border-t border-gray-200">
+                        {/* <div className="mt-12 pt-8 border-t border-gray-200">
                             <h3 className="text-xl font-semibold text-[#0A2540] mb-6">
                                 Services in Development
                             </h3>
@@ -81,7 +81,7 @@ export default function Services() {
                                     <span className="text-gray-700">Flutter Mobile Applications</span>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </main>
