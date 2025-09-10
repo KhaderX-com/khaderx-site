@@ -12,9 +12,23 @@ export default function Contact() {
                     <h1 className="text-4xl md:text-5xl font-bold text-[#0A2540] mb-4">
                         Contact & About
                     </h1>
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                    <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
                         Aerospace Engineer & Python Developer passionate about innovation and technology
                     </p>
+
+                    {/* Contact Button */}
+                    <div className="flex justify-center mb-12">
+                        <a
+                            href="mailto:contact@khaderx.com"
+                            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300"
+                        >
+                            <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            Contact Me
+                            <span className="ml-2 text-sm opacity-90">contact@khaderx.com</span>
+                        </a>
+                    </div>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
