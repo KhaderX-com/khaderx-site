@@ -52,7 +52,7 @@ export default function Hero({ className = '' }: HeroProps) {
                         </svg>
                     </a>
                     <a
-                        href="https://linkedin.com/in/khaderx"
+                        href="https://www.linkedin.com/in/khader-abueltayef-924641301/"
                         target="_blank"
                         rel="noopener noreferrer"
                         title="Connect with KhaderX on LinkedIn"
