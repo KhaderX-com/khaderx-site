@@ -24,7 +24,7 @@ export default function Services() {
                         </div>
 
                         <h2 className="text-3xl font-bold text-[#0A2540] mb-4">
-                            Coming Soon
+                            Coming Soon...
                         </h2>
 
                         {/* <p className="text-lg text-gray-600 mb-8 leading-relaxed">
