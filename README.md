@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
+  <img src="public/images/logo/logo-2.png" alt="KhaderX Logo" width="200" height="200" />
 
-## Getting Started
+  # KhaderX
 
-First, run the development server:
+  **Engineering Tomorrow**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+  *Aerospace and Aeronautical Engineer, University of Liège. Passionate about Python Dev. , Scientific computing and Flutter - Dart (Mobile & Desktop Apps Dev.)*
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  [🌐 Live Website](https://khaderx.com) • [📧 Contact](mailto:contact@khaderx.com) • [💼 LinkedIn](https://www.linkedin.com/in/khader-abueltayef-924641301/)
+</div>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📋 About
 
-## Learn More
+KhaderX is a professional portfolio website showcasing the work and expertise of Khader ABUELTAYEF, an Aerospace and Aeronautical Engineer, Python and Flutter - Dart (Mobile & Desktop Apps Dev.) Developer. The site features a modern, responsive design built with cutting-edge web technologies.
 
-To learn more about Next.js, take a look at the following resources:
+### 🎯 Mission
+To bridge the gap between aerospace, aeronautical, mechanical and day-to-day engineering and software development, delivering innovative solutions that push the boundaries of technology.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✨ Features - Website Highlights
 
-## Deploy on Vercel
+- **🏠 Modern Landing Page** - Eye-catching hero section with professional branding
+- **👤 Comprehensive Contact Page** - Detailed personal information, education, skills, and professional links
+- **🛠️ Services Preview** - Coming soon page for professional services
+- **📁 Projects Showcase** - Portfolio of technical projects (coming soon)
+- **📱 Fully Responsive** - Optimized for all devices and screen sizes
+- **🎨 Brand Consistent** - Adheres to KhaderX branding guidelines
+- **⚡ Fast & Optimized** - Built with modern web technologies for optimal performance
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎨 Branding Guidelines
+
+### Color Palette
+- **Primary Deep Blue**: `#0A2540` - Headers, navigation, main text
+- **Accent Cyan**: `#00C2FF` - Buttons, highlights, links
+- **Neutral Light Gray**: `#F5F7FA` - Backgrounds, sections
+- **Text Dark Charcoal**: `#1A1A1A` - Body text, contrast
+
+### Typography
+- **Primary Font**: Sans-serif, Geometric Modern (Poppins, Montserrat, Inter)
+- **Logo Font**: Custom-styled **KX** monogram in bold geometric sans-serif
+
+---
+
+## 🤝 Connect
+
+**Khader ABUELTAYEF**
+- **Email**: contact@khaderx.com
+- **LinkedIn**: [khader-abueltayef-924641301](https://www.linkedin.com/in/khader-abueltayef-924641301/)
+- **GitHub**: [KhaderX-com](https://github.com/KhaderX-com)
+
+---
+
+<div align="center">
+  <p><strong>Engineering Tomorrow</strong></p>
+  <p><em>Built with passion and precision</em></p>
+</div>
