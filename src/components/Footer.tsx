@@ -23,6 +23,12 @@ export default function Footer({ className = '' }: FooterProps) {
                             Services
                         </Link>
                         <Link
+                            href="/projects"
+                            className="text-gray-300 hover:text-white text-sm font-medium transition-colors duration-200"
+                        >
+                            Projects
+                        </Link>
+                        <Link
                             href="/contact"
                             className="text-gray-300 hover:text-white text-sm font-medium transition-colors duration-200"
                         >

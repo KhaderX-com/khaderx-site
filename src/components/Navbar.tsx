@@ -34,6 +34,12 @@ export default function Navbar({ className = '' }: NavbarProps) {
                                 Services
                             </Link>
                             <Link
+                                href="/projects"
+                                className="text-[#0A2540] hover:text-[#00C2FF] px-3 py-2 text-sm font-bold transition-colors duration-200"
+                            >
+                                Projects
+                            </Link>
+                            <Link
                                 href="/contact"
                                 className="text-[#0A2540] hover:text-[#00C2FF] px-3 py-2 text-sm font-bold transition-colors duration-200"
                             >
