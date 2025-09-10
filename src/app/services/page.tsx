@@ -28,7 +28,7 @@ export default function Services() {
                         </h2>
 
                         <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                            I'm currently developing a comprehensive range of services to help bring your projects to life.
+                            I&apos;m currently developing a comprehensive range of services to help bring your projects to life.
                             From aerospace engineering consulting to custom software development, exciting offerings are on the way!
                         </p>
 
