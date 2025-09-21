@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Breadcrumb from '@/components/Breadcrumb';
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -22,6 +23,9 @@ export default function Contact() {
             <Navbar />
 
             <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 pt-20 sm:pt-24 max-w-6xl">
+                {/* Breadcrumb Navigation */}
+                <Breadcrumb className="mb-8" />
+
                 {/* Header Section */}
                 <div className="text-center mb-12">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0A2540] mb-4">
