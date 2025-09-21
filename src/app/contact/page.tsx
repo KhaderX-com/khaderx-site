@@ -6,10 +6,10 @@ export default function Contact() {
         <div className="min-h-screen bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50">
             <Navbar />
 
-            <main className="container mx-auto px-4 py-12 pt-24 max-w-6xl">
+            <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 pt-20 sm:pt-24 max-w-6xl">
                 {/* Header Section */}
                 <div className="text-center mb-12">
-                    <h1 className="text-4xl md:text-5xl font-bold text-[#0A2540] mb-4">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0A2540] mb-4">
                         Contact & About
                     </h1>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">

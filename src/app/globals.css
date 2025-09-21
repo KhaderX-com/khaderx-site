@@ -3,9 +3,6 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -39,13 +36,43 @@ img {
   zoom: 1 !important;
 }
 
-/* Hero background without zoom/scaling */
+/* Hero background without zoom/scaling - mobile-friendly */
 .hero-background {
   background-image: url('/images/hero/hero-airplane-cyan.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  /* Remove fixed attachment for mobile compatibility */
+  background-attachment: scroll;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: auto;
+}
+
+/* Fixed attachment only on larger screens */
+@media (min-width: 768px) {
+  .hero-background {
+    background-attachment: fixed;
+  }
+}
+
+/* Ensure smooth scrolling on mobile */
+@media (max-width: 767px) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Prevent horizontal overflow */
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* Touch-friendly tap targets */
+@media (max-width: 768px) {
+
+  button,
+  a {
+    min-height: 44px;
+    min-width: 44px;
+  }
 }

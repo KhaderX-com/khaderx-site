@@ -6,10 +6,10 @@ export default function Projects() {
         <div className="min-h-screen bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50">
             <Navbar />
 
-            <main className="container mx-auto px-4 py-12 pt-24 max-w-4xl">
+            <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 pt-20 sm:pt-24 max-w-4xl">
                 {/* Header Section */}
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl md:text-5xl font-bold text-[#0A2540] mb-6">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0A2540] mb-4 sm:mb-6">
                         Projects
                     </h1>
 
