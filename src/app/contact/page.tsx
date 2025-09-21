@@ -1,5 +1,20 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Contact & About",
+    description: "Get in touch with KhaderX for aerospace engineering consulting, Python development services, or collaboration opportunities. Learn more about Khader Abueltayef's background and expertise.",
+    openGraph: {
+        title: "Contact & About | KhaderX",
+        description: "Get in touch with KhaderX for aerospace engineering consulting, Python development services, or collaboration opportunities. Learn more about Khader Abueltayef's background and expertise.",
+        url: "https://khaderx.com/contact",
+    },
+    twitter: {
+        title: "Contact & About | KhaderX",
+        description: "Get in touch with KhaderX for aerospace engineering consulting, Python development services, or collaboration opportunities.",
+    },
+};
 
 export default function Contact() {
     return (

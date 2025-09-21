@@ -1,5 +1,20 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Services",
+    description: "Professional aerospace engineering consulting, Python development services, aeroelasticity analysis, technical writing, and custom software solutions offered by KhaderX.",
+    openGraph: {
+        title: "Services | KhaderX",
+        description: "Professional aerospace engineering consulting, Python development services, aeroelasticity analysis, technical writing, and custom software solutions offered by KhaderX.",
+        url: "https://khaderx.com/services",
+    },
+    twitter: {
+        title: "Services | KhaderX",
+        description: "Professional aerospace engineering consulting, Python development services, aeroelasticity analysis, technical writing, and custom software solutions.",
+    },
+};
 
 export default function Services() {
     return (

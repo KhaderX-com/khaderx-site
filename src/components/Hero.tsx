@@ -16,12 +16,11 @@ export default function Hero({ className = '' }: HeroProps) {
             <div className="relative w-full h-full">
                 <Image
                     src="/images/hero/hero-airplane-cyan-high-quality-4.png"
-                    alt="Hero airplane"
+                    alt="KhaderX aerospace engineering hero - modern aircraft representing innovation and technical excellence"
                     fill
                     className="object-cover object-center"
                     priority
-                    quality={100}
-                    unoptimized
+                    quality={95}
                     sizes="100vw"
                 />
 

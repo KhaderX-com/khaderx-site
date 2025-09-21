@@ -1,5 +1,20 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Projects",
+    description: "Explore KhaderX's portfolio of aerospace engineering projects, Python development tools, and innovative technical solutions. From aeroelasticity simulations to custom software applications.",
+    openGraph: {
+        title: "Projects | KhaderX",
+        description: "Explore KhaderX's portfolio of aerospace engineering projects, Python development tools, and innovative technical solutions. From aeroelasticity simulations to custom software applications.",
+        url: "https://khaderx.com/projects",
+    },
+    twitter: {
+        title: "Projects | KhaderX",
+        description: "Explore KhaderX's portfolio of aerospace engineering projects, Python development tools, and innovative technical solutions.",
+    },
+};
 
 export default function Projects() {
     return (

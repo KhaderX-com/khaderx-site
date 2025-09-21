@@ -23,7 +23,7 @@ export default function Navbar({ className = '' }: NavbarProps) {
                         <Link href="/" className="flex items-center">
                             <Image
                                 src="/images/logo/logo-3-removebg-preview.png"
-                                alt="KhaderX Logo"
+                                alt="KhaderX Logo - Engineering Tomorrow"
                                 width={120}
                                 height={40}
                                 className="h-10 w-auto"
