@@ -55,49 +55,44 @@ export default function Breadcrumb({ className = '', customItems }: BreadcrumbPr
     }
 
     return (
-        <nav
-            className={`flex items-center space-x-2 text-sm text-gray-600 mb-6 ${className}`}
-            aria-label="Breadcrumb"
-        >
-            <ol className="flex items-center space-x-2">
-                {breadcrumbs.map((item, index) => (
-                    <li key={item.href} className="flex items-center">
-                        {index > 0 && (
-                            <svg
-                                className="w-4 h-4 mx-2 text-gray-400"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M9 5l7 7-7 7"
-                                />
-                            </svg>
-                        )}
+        <nav className={`w-full text-sm text-gray-600 mb-6 ${className}`} aria-label="Breadcrumb">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <ol className="flex items-baseline gap-1">
+                    {breadcrumbs.map((item, index) => (
+                        <li key={item.href} className="flex items-baseline">
+                            {index > 0 && (
+                                <svg
+                                    className="w-3 h-3 text-gray-400 mx-1.5 mt-0.5 flex-shrink-0"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M9 5l7 7-7 7"
+                                    />
+                                </svg>
+                            )}
 
-                        {index === breadcrumbs.length - 1 ? (
-                            // Current page (not clickable)
-                            <span
-                                className="font-medium text-[#0A2540] cursor-default"
-                                aria-current="page"
-                            >
-                                {item.label}
-                            </span>
-                        ) : (
-                            // Clickable link
-                            <Link
-                                href={item.href}
-                                className="hover:text-[#00C2FF] transition-colors duration-200 font-medium"
-                            >
-                                {item.label}
-                            </Link>
-                        )}
-                    </li>
-                ))}
-            </ol>
+                            {index === breadcrumbs.length - 1 ? (
+                                <span className="font-medium text-[#0A2540] inline-block" aria-current="page">
+                                    {item.label}
+                                </span>
+                            ) : (
+                                <Link
+                                    href={item.href}
+                                    className="hover:text-[#00C2FF] transition-colors duration-200 font-medium inline-block"
+                                >
+                                    {item.label}
+                                </Link>
+                            )}
+                        </li>
+                    ))}
+                </ol>
+            </div>
         </nav>
     );
 }
