@@ -61,13 +61,13 @@ export default function Navbar({ className = '' }: NavbarProps) {
                         <button
                             type="button"
                             onClick={toggleMenu}
-                            className="bg-white/90 backdrop-blur-sm rounded-md p-2 inline-flex items-center justify-center text-[#0A2540] hover:text-[#00C2FF] hover:bg-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+                            className="bg-transparent backdrop-blur-md border border-white/30 rounded-lg p-2.5 inline-flex items-center justify-center text-[#0A2540] hover:text-[#00C2FF] hover:bg-white/20 hover:border-white/50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#00C2FF]/50 focus:ring-offset-2 focus:ring-offset-transparent shadow-lg"
                             {...(isMenuOpen && { 'aria-expanded': true })}
                         >
                             <span className="sr-only">Open main menu</span>
-                            {/* Hamburger icon */}
+                            {/* Hamburger icon with improved animation */}
                             <svg
-                                className="h-6 w-6"
+                                className={`h-6 w-6 transition-transform duration-300 ease-in-out ${isMenuOpen ? 'rotate-90' : 'rotate-0'}`}
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
                                 viewBox="0 0 24 24"
@@ -77,7 +77,7 @@ export default function Navbar({ className = '' }: NavbarProps) {
                                 <path
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
-                                    strokeWidth={2}
+                                    strokeWidth={2.5}
                                     d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
                                 />
                             </svg>
@@ -89,24 +89,24 @@ export default function Navbar({ className = '' }: NavbarProps) {
             {/* Mobile menu, show/hide based on menu state */}
             {isMenuOpen && (
                 <div className="md:hidden">
-                    <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-lg">
+                    <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-transparent backdrop-blur-md border-t border-white/20 shadow-lg">
                         <Link
                             href="/projects"
-                            className="text-[#0A2540] hover:text-[#00C2FF] block px-3 py-3 text-base font-bold transition-colors duration-200 rounded-md hover:bg-gray-50"
+                            className="text-[#0A2540] hover:text-[#00C2FF] block px-3 py-3 text-base font-bold transition-colors duration-200 rounded-md hover:bg-white/20"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Projects
                         </Link>
                         <Link
                             href="/services"
-                            className="text-[#0A2540] hover:text-[#00C2FF] block px-3 py-3 text-base font-bold transition-colors duration-200 rounded-md hover:bg-gray-50"
+                            className="text-[#0A2540] hover:text-[#00C2FF] block px-3 py-3 text-base font-bold transition-colors duration-200 rounded-md hover:bg-white/20"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Services
                         </Link>
                         <Link
                             href="/contact"
-                            className="text-[#0A2540] hover:text-[#00C2FF] block px-3 py-3 text-base font-bold transition-colors duration-200 rounded-md hover:bg-gray-50"
+                            className="text-[#0A2540] hover:text-[#00C2FF] block px-3 py-3 text-base font-bold transition-colors duration-200 rounded-md hover:bg-white/20"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Contact
