@@ -4,6 +4,8 @@ import "./globals.css";
 import StructuredData from "@/components/StructuredData";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import TransitionProvider from "@/components/TransitionProvider";
+import PerformanceMonitor from "@/components/PerformanceMonitor";
+import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -131,6 +133,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${orbitron.variable} antialiased bg-black text-white min-h-screen`}
       >
+        <PerformanceMonitor />
+        <ServiceWorkerRegister />
         <TransitionProvider>
           {children}
         </TransitionProvider>
