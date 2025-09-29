@@ -11,20 +11,20 @@ export default function Footer({ className = '' }: FooterProps) {
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-60"></div>
 
             {/* Main footer content */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+            <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-6 sm:py-8 lg:py-12">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-center">
 
                     {/* Brand Section */}
-                    <div className="text-center lg:text-left space-y-3">
-                        <div className="font-heading text-xl sm:text-2xl font-bold">
+                    <div className="text-center sm:text-left lg:text-left space-y-2 sm:space-y-3 order-1 sm:order-1 lg:order-1">
+                        <div className="font-heading text-lg sm:text-xl lg:text-2xl font-bold">
                             <span className="text-cyan-400">K</span>
                             <span className="text-white">hader</span>
                             <span className="text-cyan-400">X</span>
-                            <span className="text-gray-400 mx-2">-</span>
+                            <span className="text-gray-400 mx-1 sm:mx-2">-</span>
                             <span className="text-cyan-400">K</span>
                             <span className="text-cyan-400">X</span>
                         </div>
-                        <p className="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto lg:mx-0">
+                        <p className="text-gray-400 text-xs sm:text-sm leading-relaxed max-w-xs mx-auto sm:mx-0 lg:mx-0">
                             <span className="text-cyan-400 font-medium">Engineering Tomorrow, Today</span>
                             <br />
                             <span className="text-gray-500 text-xs mt-1 block">Cutting-edge aerospace | aeronautical | mechanical engineering solutions and innovative software development</span>
@@ -32,7 +32,7 @@ export default function Footer({ className = '' }: FooterProps) {
                     </div>
 
                     {/* Navigation Links */}
-                    <div className="flex flex-wrap justify-center gap-6 lg:gap-8">
+                    <div className="flex flex-wrap justify-center sm:justify-start lg:justify-center gap-4 sm:gap-6 lg:gap-8 order-2 sm:order-3 lg:order-2">
                         <Link
                             href="/projects"
                             className="group relative text-gray-300 hover:text-cyan-400 text-sm sm:text-base font-medium transition-all duration-300 transform hover:scale-105"
@@ -57,16 +57,16 @@ export default function Footer({ className = '' }: FooterProps) {
                     </div>
 
                     {/* Social Links */}
-                    <div className="flex justify-center lg:justify-end items-center gap-4">
+                    <div className="flex justify-center sm:justify-end lg:justify-end items-center gap-3 sm:gap-4 order-3 sm:order-2 lg:order-3 col-span-1 sm:col-span-2 lg:col-span-1">
                         <a
                             href="https://github.com/KhaderX-com"
                             target="_blank"
                             rel="noopener noreferrer"
                             title="Visit KhaderX on GitHub"
-                            className="flex items-center justify-center p-2.5 bg-gray-800/60 backdrop-blur-sm border border-gray-700 text-gray-300 rounded-lg hover:bg-cyan-400/10 hover:border-cyan-400/50 hover:text-cyan-400 transition-all duration-300 hover:scale-110 group"
+                            className="flex items-center justify-center p-2 sm:p-2.5 bg-gray-800/60 backdrop-blur-sm border border-gray-700 text-gray-300 rounded-lg hover:bg-cyan-400/10 hover:border-cyan-400/50 hover:text-cyan-400 transition-all duration-300 hover:scale-110 group"
                         >
                             <svg
-                                className="w-4 h-4 group-hover:drop-shadow-sm group-hover:drop-shadow-cyan-400/50"
+                                className="w-3 h-3 sm:w-4 sm:h-4 group-hover:drop-shadow-sm group-hover:drop-shadow-cyan-400/50"
                                 fill="currentColor"
                                 viewBox="0 0 24 24"
                             >
@@ -78,10 +78,10 @@ export default function Footer({ className = '' }: FooterProps) {
                             target="_blank"
                             rel="noopener noreferrer"
                             title="Connect with KhaderX on LinkedIn"
-                            className="flex items-center justify-center p-2.5 bg-gray-800/60 backdrop-blur-sm border border-gray-700 text-gray-300 rounded-lg hover:bg-cyan-400/10 hover:border-cyan-400/50 hover:text-cyan-400 transition-all duration-300 hover:scale-110 group"
+                            className="flex items-center justify-center p-2 sm:p-2.5 bg-gray-800/60 backdrop-blur-sm border border-gray-700 text-gray-300 rounded-lg hover:bg-cyan-400/10 hover:border-cyan-400/50 hover:text-cyan-400 transition-all duration-300 hover:scale-110 group"
                         >
                             <svg
-                                className="w-4 h-4 group-hover:drop-shadow-sm group-hover:drop-shadow-cyan-400/50"
+                                className="w-3 h-3 sm:w-4 sm:h-4 group-hover:drop-shadow-sm group-hover:drop-shadow-cyan-400/50"
                                 fill="currentColor"
                                 viewBox="0 0 24 24"
                             >
@@ -91,10 +91,10 @@ export default function Footer({ className = '' }: FooterProps) {
                         <a
                             href="mailto:contact@khaderx.com"
                             title="Email KhaderX"
-                            className="flex items-center justify-center p-2.5 bg-gray-800/60 backdrop-blur-sm border border-gray-700 text-gray-300 rounded-lg hover:bg-cyan-400/10 hover:border-cyan-400/50 hover:text-cyan-400 transition-all duration-300 hover:scale-110 group"
+                            className="flex items-center justify-center p-2 sm:p-2.5 bg-gray-800/60 backdrop-blur-sm border border-gray-700 text-gray-300 rounded-lg hover:bg-cyan-400/10 hover:border-cyan-400/50 hover:text-cyan-400 transition-all duration-300 hover:scale-110 group"
                         >
                             <svg
-                                className="w-4 h-4 group-hover:drop-shadow-sm group-hover:drop-shadow-cyan-400/50"
+                                className="w-3 h-3 sm:w-4 sm:h-4 group-hover:drop-shadow-sm group-hover:drop-shadow-cyan-400/50"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
@@ -105,10 +105,10 @@ export default function Footer({ className = '' }: FooterProps) {
                         <a
                             href="tel:+32483817658"
                             title="Call KhaderX"
-                            className="flex items-center justify-center p-2.5 bg-gray-800/60 backdrop-blur-sm border border-gray-700 text-gray-300 rounded-lg hover:bg-cyan-400/10 hover:border-cyan-400/50 hover:text-cyan-400 transition-all duration-300 hover:scale-110 group"
+                            className="flex items-center justify-center p-2 sm:p-2.5 bg-gray-800/60 backdrop-blur-sm border border-gray-700 text-gray-300 rounded-lg hover:bg-cyan-400/10 hover:border-cyan-400/50 hover:text-cyan-400 transition-all duration-300 hover:scale-110 group"
                         >
                             <svg
-                                className="w-4 h-4 group-hover:drop-shadow-sm group-hover:drop-shadow-cyan-400/50"
+                                className="w-3 h-3 sm:w-4 sm:h-4 group-hover:drop-shadow-sm group-hover:drop-shadow-cyan-400/50"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
@@ -116,30 +116,16 @@ export default function Footer({ className = '' }: FooterProps) {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                             </svg>
                         </a>
-                        <div
-                            title="Location: Belgium"
-                            className="flex items-center justify-center p-2.5 bg-gray-800/60 backdrop-blur-sm border border-gray-700 text-gray-300 rounded-lg hover:bg-cyan-400/10 hover:border-cyan-400/50 hover:text-cyan-400 transition-all duration-300 hover:scale-110 group cursor-default"
-                        >
-                            <svg
-                                className="w-4 h-4 group-hover:drop-shadow-sm group-hover:drop-shadow-cyan-400/50"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                        </div>
                     </div>
                 </div>
 
                 {/* Bottom section with improved typography */}
-                <div className="mt-8 pt-6 border-t border-gray-800/50 text-center">
+                <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-gray-800/50 text-center">
                     <div className="flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
-                        <p className="text-sm text-gray-400 font-medium">
+                        <p className="text-xs sm:text-sm text-gray-400 font-medium">
                             © 2025 <span className="font-semibold"><span className="text-white">K</span><span className="text-white">hader</span><span className="text-white">X</span></span>. All rights reserved.
                         </p>
-                        <p className="text-xs text-gray-500 ">
+                        <p className="text-xs text-gray-500">
                             Engineering Tomorrow, Today
                         </p>
                     </div>

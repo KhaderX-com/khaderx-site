@@ -5,8 +5,8 @@
 @font-face {
   font-family: 'MADE Waffle Soft';
   src: url('/fonts/MADEWaffleSoft.otf') format('opentype'),
-       url('/fonts/MADEWaffleSoft.woff2') format('woff2'),
-       url('/fonts/MADEWaffleSoft.woff') format('woff');
+    url('/fonts/MADEWaffleSoft.woff2') format('woff2'),
+    url('/fonts/MADEWaffleSoft.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -25,7 +25,7 @@ html {
   --accent-orange: #FF6A00;
   --secondary-gray: #1a1a1a;
   --tertiary-gray: #2a2a2a;
-  
+
   /* Font Variables */
   --font-brand: "MADE Waffle Soft", "Inter", sans-serif;
   --font-heading: "MADE Waffle Soft", "Orbitron", sans-serif;
@@ -56,9 +56,12 @@ body {
 
 /* Neon triangle pulse animation */
 @keyframes neonPulse {
-  0%, 100% {
+
+  0%,
+  100% {
     filter: drop-shadow(0 0 5px #00E5FF) drop-shadow(0 0 10px #00E5FF) drop-shadow(0 0 15px #00E5FF);
   }
+
   50% {
     filter: drop-shadow(0 0 10px #00E5FF) drop-shadow(0 0 20px #00E5FF) drop-shadow(0 0 30px #00E5FF) drop-shadow(0 0 40px #00E5FF);
   }
@@ -66,9 +69,12 @@ body {
 
 /* Subtle breathing animation for triangles */
 @keyframes breathe {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.05);
   }
@@ -218,16 +224,19 @@ img {
 
 /* Navbar spacing utilities to prevent content overlap */
 .navbar-safe-top {
-  padding-top: 4rem; /* 64px - matches navbar height */
+  padding-top: 4rem;
+  /* 64px - matches navbar height */
 }
 
 .navbar-safe-margin {
-  margin-top: 4rem; /* 64px - matches navbar height */
+  margin-top: 4rem;
+  /* 64px - matches navbar height */
 }
 
 /* For sections that need to start immediately after navbar */
 .after-navbar {
-  margin-top: 4rem; /* 64px - matches navbar height */
+  margin-top: 4rem;
+  /* 64px - matches navbar height */
 }
 
 /* Professional Cards Animation */
@@ -236,6 +245,7 @@ img {
     opacity: 0;
     transform: translateY(30px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -278,15 +288,15 @@ img {
 
 .card-hover-glow {
   box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.1),
-              0 4px 20px -2px rgba(0, 0, 0, 0.5),
-              0 0 40px -8px rgba(0, 229, 255, 0.05);
+    0 4px 20px -2px rgba(0, 0, 0, 0.5),
+    0 0 40px -8px rgba(0, 229, 255, 0.05);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-hover-glow:hover {
   box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.3),
-              0 8px 40px -4px rgba(0, 0, 0, 0.7),
-              0 0 60px -10px rgba(0, 229, 255, 0.2);
+    0 8px 40px -4px rgba(0, 0, 0, 0.7),
+    0 0 60px -10px rgba(0, 229, 255, 0.2);
 }
 
 /* Enhanced UX Design Utilities */
@@ -322,14 +332,26 @@ img {
 .btn-primary {
   display: inline-flex;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.75rem 1.5rem;
   font-weight: 700;
   border-radius: 0.75rem;
   background: linear-gradient(to right, #00E5FF, #00C2FF);
   color: #000000;
   font-family: var(--font-brand);
+  font-size: 0.875rem;
   transition: all 300ms ease;
   transform: scale(1);
+  text-align: center;
+  justify-content: center;
+  min-height: 44px;
+  /* Minimum touch target */
+}
+
+@media (min-width: 640px) {
+  .btn-primary {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
 }
 
 .btn-primary:hover {
@@ -341,15 +363,27 @@ img {
 .btn-secondary {
   display: inline-flex;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.75rem 1.5rem;
   font-weight: 600;
   border-radius: 0.75rem;
   background: transparent;
   border: 2px solid rgba(0, 229, 255, 0.5);
   color: #00E5FF;
   font-family: var(--font-brand);
+  font-size: 0.875rem;
   transition: all 300ms ease;
   transform: scale(1);
+  text-align: center;
+  justify-content: center;
+  min-height: 44px;
+  /* Minimum touch target */
+}
+
+@media (min-width: 640px) {
+  .btn-secondary {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
 }
 
 .btn-secondary:hover {
@@ -369,9 +403,12 @@ img {
 
 /* Improved Card Animations */
 @keyframes cardFloat {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-8px);
   }
@@ -439,4 +476,138 @@ img {
 .focus-visible:focus-visible {
   outline: none;
   box-shadow: 0 0 0 2px rgba(0, 229, 255, 0.5), 0 0 0 4px rgba(0, 0, 0, 1);
+}
+
+/* Additional Responsive Utilities */
+/* Responsive Typography Scale */
+.text-responsive-xl {
+  font-size: 1.5rem;
+  /* 24px */
+  line-height: 2rem;
+  /* 32px */
+}
+
+@media (min-width: 640px) {
+  .text-responsive-xl {
+    font-size: 1.875rem;
+    /* 30px */
+    line-height: 2.25rem;
+    /* 36px */
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-responsive-xl {
+    font-size: 2.25rem;
+    /* 36px */
+    line-height: 2.5rem;
+    /* 40px */
+  }
+}
+
+/* Mobile-first responsive containers */
+.container-responsive {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 640px) {
+  .container-responsive {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-responsive {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-responsive {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-responsive {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container-responsive {
+    max-width: 1536px;
+  }
+}
+
+/* Responsive Flexbox utilities */
+.flex-responsive {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .flex-responsive {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+}
+
+/* Touch target improvements for mobile */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+  touch-action: manipulation;
+}
+
+/* Safe area padding for mobile devices */
+@supports (padding: max(0px)) {
+  .safe-area-padding {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+
+  .neon-glow,
+  .neon-text-glow {
+    text-shadow: none;
+    box-shadow: none;
+  }
+
+  .btn-primary {
+    border: 2px solid #00E5FF;
+  }
+
+  .btn-secondary {
+    border-width: 3px;
+  }
+}
+
+/* Hero text shadow utility */
+.hero-text-shadow {
+  text-shadow: 0 12px 24px rgba(0, 0, 0, 0.65);
 }

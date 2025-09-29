@@ -6,85 +6,78 @@ interface HeroProps {
 
 export default function Hero({ className = '' }: HeroProps) {
     return (
-        <section
-            className={`relative w-full min-h-screen h-screen overflow-hidden bg-black ${className}`}
-        >
-            {/* Dark Background with Neon Accent */}
-            <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />
-
+        <section className={`relative w-full bg-black ${className}`}>
             {/* Hero Image - Responsive: Vertical on mobile, Horizontal on desktop */}
-            <div className="relative w-full h-full">
-                {/* Mobile/Portrait - Vertical Images */}
+            <div className="relative w-full">
                 <div className="block md:hidden">
-                    <Image
-                        src="/images/New-Logo/main-hero-vertical-1333-2000.jpg"
-                        alt="KhaderX aerospace | aeronautical | mechanical engineering hero - cutting-edge technology and innovation"
-                        fill
-                        className="object-cover object-center opacity-100"
-                        priority
-                        quality={95}
-                        sizes="100vw"
-                    />
+                    <div className="relative w-full aspect-[2/3]">
+                        <Image
+                            src="/images/New-Logo/main-hero-vertical-1333-2000.jpg"
+                            alt="KhaderX aerospace | aeronautical | mechanical engineering hero - cutting-edge technology and innovation"
+                            fill
+                            className="object-contain object-center"
+                            priority
+                            quality={95}
+                            sizes="100vw"
+                        />
+                    </div>
                 </div>
 
-                {/* Desktop/Landscape - Horizontal Images */}
                 <div className="hidden md:block">
-                    <Image
-                        src="/images/New-Logo/main-hero-horizontal-1920-1280.jpg"
-                        alt="KhaderX aerospace | aeronautical | mechanical engineering hero - cutting-edge technology and innovation"
-                        fill
-                        className="object-cover object-center opacity-100"
-                        priority
-                        quality={95}
-                        sizes="100vw"
-                    />
+                    <div className="relative w-full aspect-[3/2]">
+                        <Image
+                            src="/images/New-Logo/main-hero-horizontal-1920-1280.jpg"
+                            alt="KhaderX aerospace | aeronautical | mechanical engineering hero - cutting-edge technology and innovation"
+                            fill
+                            className="object-contain object-center"
+                            priority
+                            quality={95}
+                            sizes="100vw"
+                        />
+                    </div>
                 </div>
-
-                {/* Subtle neon cyan overlay for brand consistency */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20" />
-
-                {/* Gentle neon accent */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400/8 to-transparent" />
             </div>
 
-            {/* Content overlay area - Brand new design */}
-            <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-start px-4 sm:px-6 md:px-8 lg:px-12 pt-24 sm:pt-28 md:pt-32">
-                <div className="text-left z-10 w-full sm:w-4/5 md:w-4/5 lg:w-3/5 xl:w-2/3 max-w-4xl">
+            {/* Content overlay area */}
+            <div className="absolute inset-0 flex flex-col items-start justify-start px-0 pointer-events-none">
+                <div className="text-left z-10 w-full sm:w-11/12 md:w-3/5 lg:w-1/2 xl:w-2/5 2xl:w-1/3 max-w-none bg-black/50 border border-white/15 p-4 sm:p-4 md:p-6 lg:p-8 shadow-2xl pointer-events-auto h-full flex flex-col pt-18 sm:pt-20 md:pt-24 lg:pt-28 pb-10 sm:pb-12">
 
-                    {/* Main Slogan with Professional Design */}
-                    <div className="mb-8 space-y-6">
+                    {/* Main Slogan */}
+                    <div className="mb-6 sm:mb-8 space-y-4 sm:space-y-6">
                         <div className="relative">
-                            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold leading-tight font-heading">
-                                <span className="text-white">Engineering Tomorrow,</span>
-                                <br />
+                            <h1
+                                className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight font-heading text-white hero-text-shadow"
+                            >
+                                <span className="block sm:inline">Engineering Tomorrow,</span>
+                                <br className="hidden sm:block" />
                                 <span className="relative inline-block">
                                     <span className="text-cyan-400 neon-text-glow">Today</span>
-                                    <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 via-cyan-300 to-transparent rounded-full opacity-70 animate-pulse"></div>
+                                    <div className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-0.5 sm:h-1 bg-gradient-to-r from-cyan-400 via-cyan-400 to-transparent rounded-full opacity-70 animate-pulse"></div>
                                 </span>
                             </h1>
 
-                            {/* Decorative elements */}
-                            <div className="absolute -left-4 top-4 w-2 h-16 bg-gradient-to-b from-cyan-400 to-transparent opacity-30 rounded-full"></div>
-                            <div className="absolute -right-4 bottom-4 w-1 h-12 bg-gradient-to-t from-cyan-400 to-transparent opacity-20 rounded-full"></div>
+                            {/* Decorative elements - adjusted for mobile */}
+                            <div className="absolute -left-2 sm:-left-4 top-2 sm:top-4 w-1 sm:w-2 h-8 sm:h-16 bg-gradient-to-b from-cyan-400 to-transparent opacity-30 rounded-full"></div>
+                            <div className="absolute -right-2 sm:-right-4 bottom-2 sm:bottom-4 w-0.5 sm:w-1 h-6 sm:h-12 bg-gradient-to-t from-cyan-400 to-transparent opacity-20 rounded-full"></div>
                         </div>
 
-                        <div className="space-y-3">
-                            <div className="flex items-center space-x-4">
-                                <div className="w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-transparent"></div>
-                                <span className="text-cyan-400 text-sm font-medium uppercase tracking-wider">Professional Excellence</span>
+                        <div className="space-y-3 sm:space-y-3 w-full sm:w-auto">
+                            <div className="flex items-center space-x-3 sm:space-x-4 w-1/2 sm:w-auto">
+                                <div className="w-12 sm:w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-transparent"></div>
+                                <span className="text-cyan-400 text-base sm:text-sm font-semibold uppercase tracking-wider">Professional Excellence</span>
                             </div>
 
-                            {/* Aerospace | Aeronautical | Mechanical Engineer Developer - Optimized for no overlap */}
-                            <div className="text-gray-300 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed space-y-2">
-                                <p className="flex flex-wrap items-center gap-2">
-                                    <span className="text-gray-200 font-semibold">Aerospace | Aeronautical | Mechanical</span>
-                                    <span className="text-cyan-400 font-bold">Engineer</span>
-                                    <span className="text-cyan-400 font-bold">×</span>
-                                    <span className="text-cyan-400 font-semibold">Developer</span>
-                                    <span className="text-cyan-400 font-bold">×</span>
-                                    <span className="text-cyan-400 font-semibold">Entrepreneur</span>
-                                </p>
-                                <p className="text-gray-300 leading-relaxed">
+                            {/* Aerospace | Aeronautical | Mechanical Engineer Developer */}
+                            <div className="text-gray-100 leading-relaxed space-y-3 drop-shadow w-1/2 sm:w-auto">
+                                <div className="flex flex-wrap items-center gap-2 sm:gap-2">
+                                    <span className="text-gray-100 font-bold text-lg sm:text-sm md:text-base lg:text-lg">Aerospace | Aeronautical | Mechanical</span>
+                                    <span className="text-cyan-400 font-bold text-lg sm:text-sm md:text-base lg:text-lg">Engineer</span>
+                                    <span className="text-cyan-400 font-bold text-lg sm:text-sm md:text-base lg:text-lg">×</span>
+                                    <span className="text-cyan-400 font-bold text-lg sm:text-sm md:text-base lg:text-lg">Developer</span>
+                                    <span className="text-cyan-400 font-bold text-lg sm:text-sm md:text-base lg:text-lg">×</span>
+                                    <span className="text-cyan-400 font-bold text-lg sm:text-sm md:text-base lg:text-lg">Entrepreneur</span>
+                                </div>
+                                <p className="text-gray-100 leading-relaxed text-base sm:text-sm md:text-base lg:text-lg font-semibold">
                                     Merging Engineering and Software Development into one powerful, innovative ecosystem.
                                 </p>
                             </div>
