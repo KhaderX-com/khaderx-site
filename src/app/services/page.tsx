@@ -1,8 +1,12 @@
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import PageTransition from '@/components/PageTransition';
+import LoadingSpinner from '@/components/LoadingSpinner';
 import type { Metadata } from "next";
+import { lazy, Suspense } from 'react';
+
+// Lazy load Footer for better performance
+const Footer = lazy(() => import('@/components/Footer'));
 
 export const metadata: Metadata = {
     title: "Services",
@@ -292,7 +296,9 @@ export default function Services() {
                         </div>
                     </main>
 
-                    <Footer />
+                    <Suspense fallback={<LoadingSpinner />}>
+                        <Footer />
+                    </Suspense>
                 </div>
             </div>
         </PageTransition>
