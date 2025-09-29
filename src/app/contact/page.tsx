@@ -95,7 +95,7 @@ export default function Contact() {
                                 </div>
 
                                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 font-heading px-4">
-                                    Let&apos;s Build <span className="neon-text-glow">Tomorrow</span>
+                                    Let&apos;s Build <span className="text-neon-cyan">Tomorrow</span>
                                 </h1>
 
                                 <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-6 sm:mb-8 px-4">
@@ -108,13 +108,19 @@ export default function Contact() {
                                 <div className="flex justify-center mb-8 sm:mb-12 px-4">
                                     <a
                                         href="mailto:contact@khaderx.com"
-                                        className="btn-primary group enhanced-glow"
+                                        className="group glow-card-static w-full sm:w-auto max-w-2xl"
                                     >
-                                        <svg className="w-5 h-5 mr-3 group-hover:drop-shadow-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                        </svg>
-                                        Start a Conversation
-                                        <span className="ml-3 text-sm opacity-90">contact@khaderx.com</span>
+                                        <div className="glow-card-static__inner contact-cta-card">
+                                            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-cyan-400/20 to-cyan-400/5 border border-cyan-400/30 text-cyan-300 transition-transform duration-300 group-hover:scale-110 group-hover:text-cyan-100">
+                                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                                </svg>
+                                            </div>
+                                            <div className="text-center sm:text-left">
+                                                <span className="block text-lg sm:text-xl font-semibold text-white">Start a Conversation</span>
+                                                <span className="block text-sm sm:text-base font-medium text-cyan-300">contact@khaderx.com</span>
+                                            </div>
+                                        </div>
                                     </a>
                                 </div>
                             </div>
@@ -319,7 +325,7 @@ export default function Contact() {
                                         {[
                                             {
                                                 name: 'GitHub',
-                                                description: 'Code Repositories & Projects | Aerospace | Aeronautical | Mechanical Engineering',
+                                                description: 'Code Repositories & Projects',
                                                 url: 'https://github.com/KhaderX-com',
                                                 icon: (
                                                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -329,7 +335,7 @@ export default function Contact() {
                                             },
                                             {
                                                 name: 'LinkedIn',
-                                                description: 'Professional Network | Aerospace | Aeronautical | Mechanical Engineering',
+                                                description: 'Professional Network',
                                                 url: 'https://www.linkedin.com/in/khader-abueltayef-924641301/',
                                                 icon: (
                                                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -339,7 +345,7 @@ export default function Contact() {
                                             },
                                             {
                                                 name: 'PyPI',
-                                                description: 'Python Package Repository | Aerospace | Aeronautical | Mechanical Engineering',
+                                                description: 'Python Package Repository',
                                                 url: 'https://pypi.org/user/KhaderX/',
                                                 icon: (
                                                     <div className="w-6 h-6 bg-blue-500 rounded flex items-center justify-center">
@@ -411,3 +417,5 @@ export default function Contact() {
         </PageTransition>
     );
 }
+
+

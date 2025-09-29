@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Breadcrumb from '@/components/Breadcrumb';
 import PageTransition from '@/components/PageTransition';
+import Link from 'next/link';
 import LoadingSpinner from '@/components/LoadingSpinner';
 import type { Metadata } from "next";
 import { lazy, Suspense } from 'react';
@@ -32,77 +33,51 @@ interface ServiceCardProps {
 
 function ServiceCard({ title, description, subtitle, icon, features }: ServiceCardProps) {
     return (
-        <div className="group relative h-full">
-            {/* Card container with advanced styling */}
-            <div className="relative bg-gradient-to-br from-gray-900/90 to-black/95 backdrop-blur-md border border-gray-800/50 rounded-2xl p-8 h-full flex flex-col transition-all duration-500 hover:border-cyan-400/30 hover:shadow-2xl hover:shadow-cyan-400/10 hover:-translate-y-2">
-
-                {/* Subtle neon glow on hover */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-400/0 via-cyan-400/5 to-cyan-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-                {/* Top accent line */}
-                <div className="absolute top-0 left-8 right-8 h-0.5 bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-
-                <div className="relative z-10 flex flex-col h-full">
-                    {/* Icon container */}
-                    <div className="mb-6">
-                        <div className="inline-flex p-4 bg-gradient-to-br from-cyan-400/10 to-cyan-400/5 rounded-xl border border-cyan-400/20 group-hover:border-cyan-400/40 transition-all duration-300 group-hover:scale-110">
-                            <div className="text-cyan-400 group-hover:drop-shadow-lg group-hover:drop-shadow-cyan-400/50 transition-all duration-300">
-                                {icon}
+        <article className="relative h-full">
+            <div className="glow-card-static h-full">
+                <div className="glow-card-static__inner h-full">
+                    <div className="flex flex-col gap-6 flex-grow text-left">
+                        <div className="grid grid-cols-[auto,1fr] gap-4">
+                            <div className="shrink-0">
+                                <span className="glow-icon">
+                                    {icon}
+                                </span>
+                            </div>
+                            <div className="space-y-2 text-left">
+                                <h3 className="text-2xl font-heading font-semibold text-white">
+                                    {title}
+                                </h3>
+                                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-300/80">
+                                    {subtitle}
+                                </p>
+                            </div>
+                            <div className="col-span-2 space-y-4 pt-1 sm:pt-2">
+                                <p className="text-sm sm:text-base text-white leading-relaxed">
+                                    {description}
+                                </p>
+                                <ul className="space-y-2 text-sm sm:text-base text-slate-300/90">
+                                    {features.map((feature, index) => (
+                                        <li key={index} className="flex items-center gap-3">
+                                            <span className="inline-flex h-2 w-2 rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 shadow-[0_0_10px_rgba(111,0,255,0.4)]"></span>
+                                            <span>{feature}</span>
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
                         </div>
                     </div>
 
-                    {/* Content - flex-grow to push button to bottom */}
-                    <div className="flex-grow">
-                        <h3 className="text-2xl font-bold text-white mb-2 font-heading group-hover:text-cyan-50 transition-colors duration-300">
-                            {title}
-                        </h3>
-
-                        <p className="text-cyan-400 font-semibold mb-4 text-sm">
-                            {subtitle}
-                        </p>
-
-                        <p className="text-gray-300 text-base leading-relaxed mb-6 group-hover:text-gray-200 transition-colors duration-300">
-                            {description}
-                        </p>
-
-                        {/* Features list */}
-                        <ul className="space-y-2 mb-8">
-                            {features.map((feature, index) => (
-                                <li key={index} className="flex items-center text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                                    <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-3 group-hover:shadow-sm group-hover:shadow-cyan-400/50 transition-all duration-300"></div>
-                                    {feature}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    {/* Action button - positioned at bottom */}
-                    <div className="text-center mt-auto">
-                        <a
-                            href="/contact"
-                            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-cyan-500 text-black font-semibold rounded-lg hover:from-cyan-300 hover:to-cyan-400 transition-all duration-300 transform hover:scale-105 group/btn"
-                        >
-                            <span className="mr-2">Get Started</span>
-                            <svg
-                                className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform duration-300"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </a>
+                    <div className="mt-auto pt-3">
+                        <Link href="/contact" className="glow-pill">
+                            <span>Start Project</span>
+                            <span className="text-base leading-none">→</span>
+                        </Link>
                     </div>
                 </div>
-
-                {/* Bottom gradient accent */}
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 rounded-b-2xl"></div>
             </div>
-        </div>
+        </article>
     );
 }
-
 export default function Services() {
     const services: ServiceCardProps[] = [
         {
@@ -211,7 +186,7 @@ export default function Services() {
                                 </div>
 
                                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 font-heading">
-                                    Our <span className="text-gradient enhanced-glow">Services</span>
+                                    Our <span className="text-neon-cyan">Services</span>
                                 </h1>
 
                                 <div className="max-w-4xl mx-auto">
@@ -304,3 +279,5 @@ export default function Services() {
         </PageTransition>
     );
 }
+
+

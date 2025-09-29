@@ -47,7 +47,7 @@ export default function Projects() {
                                 </div>
 
                                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 font-heading">
-                                    Our <span className="text-gradient enhanced-glow">Projects</span>
+                                    Our <span className="text-neon-cyan">Projects</span>
                                 </h1>
 
                                 <div className="max-w-4xl mx-auto mb-16">
@@ -133,3 +133,4 @@ export default function Projects() {
         </PageTransition>
     );
 }
+
