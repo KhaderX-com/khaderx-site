@@ -10,12 +10,12 @@ export default function Hero({ className = '' }: HeroProps) {
             {/* Hero Image - Responsive: Vertical on mobile, Horizontal on desktop */}
             <div className="relative w-full">
                 <div className="block md:hidden">
-                    <div className="relative w-full aspect-[2/3]">
+                    <div className="relative w-full h-screen">
                         <Image
                             src="/images/New-Logo/main-hero-vertical-1333-2000.jpg"
                             alt="KhaderX aerospace | aeronautical | mechanical engineering hero - cutting-edge technology and innovation"
                             fill
-                            className="object-contain object-center"
+                            className="object-cover object-center"
                             priority
                             quality={95}
                             sizes="100vw"
