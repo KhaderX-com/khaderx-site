@@ -1,62 +1,32 @@
 <div align="center">
-  <img src="public/images/logo/logo-2.png" alt="KhaderX Logo" width="200" height="200" />
-
-  # KhaderX - KX
-
-  **Engineering Tomorrow**
-
-  *Aerospace and Aeronautical Engineer, University of Liège. Passionate about Python Dev. , Scientific computing and Flutter - Dart (Mobile & Desktop Apps Dev.)*
-
-  [🌐 Live Website](https://khaderx.com) • [📧 Contact](mailto:contact@khaderx.com) • [💼 LinkedIn](https://www.linkedin.com/in/khader-abueltayef-924641301/)
+  <img src="public/images/New-Logo/KhaderX-KX-Logo-Cyan-corner.png" alt="KhaderX Logo" width="220" height="220" />
 </div>
 
----
+# KhaderX
 
-## 📋 About
+**Engineering Tomorrow** - Professional portfolio website showcasing aerospace engineering expertise and software development services.
 
-KhaderX is a professional portfolio website showcasing the work and expertise of Khader ABUELTAYEF, an Aerospace and Aeronautical Engineer, Python and Flutter - Dart (Mobile & Desktop Apps Dev.) Developer. The site features a modern, responsive design built with cutting-edge web technologies.
+## Overview
 
-### 🎯 Mission
-To bridge the gap between aerospace, aeronautical, mechanical and day-to-day engineering and software development, delivering innovative solutions that push the boundaries of technology.
+Modern, responsive website built with Next.js, featuring professional services in web development, mobile applications, engineering software, and performance optimization.
 
----
+## Tech Stack
 
-## ✨ Features - Website Highlights
+- **Framework**: Next.js 14 with TypeScript
+- **Styling**: Tailwind CSS
+- **Components**: React with modern UI patterns
+- **Deployment**: Optimized for production
 
-- **🏠 Modern Landing Page** - Eye-catching hero section with professional branding
-- **👤 Comprehensive Contact Page** - Detailed personal information, education, skills, and professional links
-- **🛠️ Services Preview** - Coming soon page for professional services
-- **📁 Projects Showcase** - Portfolio of technical projects (coming soon)
-- **📱 Fully Responsive** - Optimized for all devices and screen sizes
-- **🎨 Brand Consistent** - Adheres to KhaderX branding guidelines
-- **⚡ Fast & Optimized** - Built with modern web technologies for optimal performance
+## Features
 
----
+- Responsive design across all devices
+- Professional service portfolio
+- Contact and consultation pages
+- SEO optimized
+- Modern UI/UX with smooth animations
 
-## 🎨 Branding Guidelines
+## Contact
 
-### Color Palette
-- **Primary Deep Blue**: `#0A2540` - Headers, navigation, main text
-- **Accent Cyan**: `#00C2FF` - Buttons, highlights, links
-- **Neutral Light Gray**: `#F5F7FA` - Backgrounds, sections
-- **Text Dark Charcoal**: `#1A1A1A` - Body text, contrast
-
-### Typography
-- **Primary Font**: Sans-serif, Geometric Modern (Poppins, Montserrat, Inter)
-- **Logo Font**: Custom-styled **KX** monogram in bold geometric sans-serif
-
----
-
-## 🤝 Connect
-
-**Khader ABUELTAYEF**
-- **Email**: contact@khaderx.com
-- **LinkedIn**: [khader-abueltayef-924641301](https://www.linkedin.com/in/khader-abueltayef-924641301/)
-- **GitHub**: [KhaderX-com](https://github.com/KhaderX-com)
-
----
-
-<div align="center">
-  <p><strong>Engineering Tomorrow</strong></p>
-  <p><em>Built with passion and precision</em></p>
-</div>
+**Website**: [khaderx.com](https://khaderx.com)  
+**Email**: contact@khaderx.com  
+**LinkedIn**: [khader-abueltayef-924641301](https://www.linkedin.com/in/khader-abueltayef-924641301/)
