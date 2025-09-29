@@ -6,16 +6,16 @@ interface HeroProps {
 
 export default function Hero({ className = '' }: HeroProps) {
     return (
-        <section className={`relative w-full bg-black ${className}`}>
+        <section className={`relative w-full h-screen bg-black ${className}`}>
             {/* Hero Image - Responsive: Vertical on mobile, Horizontal on desktop */}
-            <div className="relative w-full">
+            <div className="relative w-full h-full">
                 <div className="block md:hidden">
-                    <div className="relative w-full aspect-[2/3]">
+                    <div className="relative w-full h-full">
                         <Image
                             src="/images/New-Logo/main-hero-vertical-1333-2000.jpg"
                             alt="KhaderX aerospace | aeronautical | mechanical engineering hero - cutting-edge technology and innovation"
                             fill
-                            className="object-contain object-center"
+                            className="object-cover object-center"
                             priority
                             quality={95}
                             sizes="100vw"
@@ -24,12 +24,12 @@ export default function Hero({ className = '' }: HeroProps) {
                 </div>
 
                 <div className="hidden md:block">
-                    <div className="relative w-full aspect-[3/2]">
+                    <div className="relative w-full h-full">
                         <Image
                             src="/images/New-Logo/main-hero-horizontal-1920-1280.jpg"
                             alt="KhaderX aerospace | aeronautical | mechanical engineering hero - cutting-edge technology and innovation"
                             fill
-                            className="object-contain object-center"
+                            className="object-cover object-center"
                             priority
                             quality={95}
                             sizes="100vw"
@@ -39,8 +39,8 @@ export default function Hero({ className = '' }: HeroProps) {
             </div>
 
             {/* Content overlay area */}
-            <div className="absolute inset-0 flex flex-col items-start justify-start px-0 pointer-events-none">
-                <div className="text-left z-10 w-full sm:w-11/12 md:w-3/5 lg:w-1/2 xl:w-2/5 2xl:w-1/3 max-w-none bg-black/50 border border-white/15 p-4 sm:p-4 md:p-6 lg:p-8 shadow-2xl pointer-events-auto h-full flex flex-col pt-18 sm:pt-20 md:pt-24 lg:pt-28 pb-10 sm:pb-12">
+            <div className="absolute inset-0 flex flex-col items-start justify-center px-4 pointer-events-none">
+                <div className="text-left z-10 w-full sm:w-11/12 md:w-3/5 lg:w-1/2 xl:w-2/5 2xl:w-1/3 max-w-none bg-black/60 backdrop-blur-sm border border-white/20 p-6 sm:p-6 md:p-8 lg:p-10 shadow-2xl pointer-events-auto rounded-lg">
 
                     {/* Main Slogan */}
                     <div className="mb-6 sm:mb-8 space-y-4 sm:space-y-6">
@@ -61,14 +61,14 @@ export default function Hero({ className = '' }: HeroProps) {
                             <div className="absolute -right-2 sm:-right-4 bottom-2 sm:bottom-4 w-0.5 sm:w-1 h-6 sm:h-12 bg-gradient-to-t from-cyan-400 to-transparent opacity-20 rounded-full"></div>
                         </div>
 
-                        <div className="space-y-3 sm:space-y-3 w-full sm:w-auto">
-                            <div className="flex items-center space-x-3 sm:space-x-4 w-1/2 sm:w-auto">
+                        <div className="space-y-3 sm:space-y-3">
+                            <div className="flex items-center space-x-3 sm:space-x-4">
                                 <div className="w-12 sm:w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-transparent"></div>
-                                {/* <span className="text-cyan-400 text-base sm:text-sm font-semibold uppercase tracking-wider">Professional Excellence</span> */}
+                                <span className="text-cyan-400 text-base sm:text-sm font-semibold uppercase tracking-wider">Professional Excellence</span>
                             </div>
 
                             {/* Aerospace | Aeronautical | Mechanical Engineer Developer */}
-                            <div className="text-gray-100 leading-relaxed space-y-3 drop-shadow w-1/2 sm:w-auto">
+                            <div className="text-gray-100 leading-relaxed space-y-3 drop-shadow">
                                 <div className="flex flex-wrap items-center gap-2 sm:gap-2">
                                     <span className="text-gray-100 font-bold text-lg sm:text-sm md:text-base lg:text-lg">Aerospace | Aeronautical | Mechanical</span>
                                     <span className="text-cyan-400 font-bold text-lg sm:text-sm md:text-base lg:text-lg">Engineer</span>
