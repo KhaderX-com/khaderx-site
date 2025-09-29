@@ -25,7 +25,7 @@ export default function Navbar({ className = '' }: NavbarProps) {
                                 size="md"
                                 glowIntensity="medium"
                             />
-                            <span className="text-lg sm:text-xl font-bold tracking-wider transition-colors duration-300 font-heading">
+                            <span className="text-xl sm:text-2xl font-bold tracking-wider transition-colors duration-300 font-heading">
                                 <span className="text-cyan-400 group-hover:text-cyan-300">K</span>
                                 <span className="text-white group-hover:text-gray-200">hader</span>
                                 <span className="text-cyan-400 group-hover:text-cyan-300">X</span>
@@ -41,21 +41,21 @@ export default function Navbar({ className = '' }: NavbarProps) {
                         <div className="ml-6 lg:ml-10 flex items-baseline space-x-4 lg:space-x-8">
                             <Link
                                 href="/projects"
-                                className="group relative text-gray-300 hover:text-cyan-400 px-3 lg:px-4 py-2 text-sm font-semibold transition-all duration-300 hover:bg-cyan-400/10 rounded-lg font-brand hover:scale-105"
+                                className="group relative text-gray-300 hover:text-cyan-400 px-3 lg:px-4 py-2 text-base font-semibold transition-all duration-300 hover:bg-cyan-400/10 rounded-lg font-brand hover:scale-105"
                             >
                                 Projects
                                 <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-6 lg:group-hover:w-8"></div>
                             </Link>
                             <Link
                                 href="/services"
-                                className="group relative text-gray-300 hover:text-cyan-400 px-3 lg:px-4 py-2 text-sm font-semibold transition-all duration-300 hover:bg-cyan-400/10 rounded-lg font-brand hover:scale-105"
+                                className="group relative text-gray-300 hover:text-cyan-400 px-3 lg:px-4 py-2 text-base font-semibold transition-all duration-300 hover:bg-cyan-400/10 rounded-lg font-brand hover:scale-105"
                             >
                                 Services
                                 <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-6 lg:group-hover:w-8"></div>
                             </Link>
                             <Link
                                 href="/contact"
-                                className="group relative text-gray-300 hover:text-cyan-400 px-3 lg:px-4 py-2 text-sm font-semibold transition-all duration-300 hover:bg-cyan-400/10 rounded-lg font-brand hover:scale-105"
+                                className="group relative text-gray-300 hover:text-cyan-400 px-3 lg:px-4 py-2 text-base font-semibold transition-all duration-300 hover:bg-cyan-400/10 rounded-lg font-brand hover:scale-105"
                             >
                                 Contact
                                 <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-6 lg:group-hover:w-8"></div>
@@ -99,21 +99,21 @@ export default function Navbar({ className = '' }: NavbarProps) {
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/95 backdrop-blur-md border-t border-cyan-400/20 shadow-lg">
                         <Link
                             href="/projects"
-                            className="text-gray-300 hover:text-cyan-400 block px-3 py-3 text-base font-semibold transition-all duration-300 rounded-md hover:bg-cyan-400/10 border-l-2 border-transparent hover:border-cyan-400/50"
+                            className="text-gray-300 hover:text-cyan-400 block px-3 py-3 text-lg font-semibold transition-all duration-300 rounded-md hover:bg-cyan-400/10 border-l-2 border-transparent hover:border-cyan-400/50"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Projects
                         </Link>
                         <Link
                             href="/services"
-                            className="text-gray-300 hover:text-cyan-400 block px-3 py-3 text-base font-semibold transition-all duration-300 rounded-md hover:bg-cyan-400/10 border-l-2 border-transparent hover:border-cyan-400/50"
+                            className="text-gray-300 hover:text-cyan-400 block px-3 py-3 text-lg font-semibold transition-all duration-300 rounded-md hover:bg-cyan-400/10 border-l-2 border-transparent hover:border-cyan-400/50"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Services
                         </Link>
                         <Link
                             href="/contact"
-                            className="text-gray-300 hover:text-cyan-400 block px-3 py-3 text-base font-semibold transition-all duration-300 rounded-md hover:bg-cyan-400/10 border-l-2 border-transparent hover:border-cyan-400/50"
+                            className="text-gray-300 hover:text-cyan-400 block px-3 py-3 text-lg font-semibold transition-all duration-300 rounded-md hover:bg-cyan-400/10 border-l-2 border-transparent hover:border-cyan-400/50"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Contact

@@ -32,18 +32,18 @@ function ProfessionalCard({ title, description, icon, href, features }: CardProp
 
                     {/* Content - flex-grow to push action button to bottom */}
                     <div className="flex-grow">
-                        <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4 font-heading group-hover:text-cyan-50 transition-colors duration-300">
+                        <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-3 sm:mb-4 font-heading group-hover:text-cyan-50 transition-colors duration-300">
                             {title}
                         </h3>
 
-                        <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-4 sm:mb-6 group-hover:text-gray-200 transition-colors duration-300">
+                        <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6 group-hover:text-gray-200 transition-colors duration-300">
                             {description}
                         </p>
 
                         {/* Features list */}
                         <ul className="space-y-1.5 sm:space-y-2 mb-6 sm:mb-8">
                             {features.map((feature, index) => (
-                                <li key={index} className="flex items-center text-xs sm:text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                                <li key={index} className="flex items-center text-sm sm:text-base text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
                                     <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-cyan-400 rounded-full mr-2 sm:mr-3 group-hover:shadow-sm group-hover:shadow-cyan-400/50 transition-all duration-300"></div>
                                     {feature}
                                 </li>
@@ -55,7 +55,7 @@ function ProfessionalCard({ title, description, icon, href, features }: CardProp
                     <div className="mt-auto">
                         <Link
                             href={href}
-                            className="inline-flex items-center text-cyan-400 font-medium text-xs sm:text-sm hover:text-cyan-300 transition-all duration-300 group/link"
+                            className="inline-flex items-center text-cyan-400 font-medium text-sm sm:text-base hover:text-cyan-300 transition-all duration-300 group/link"
                         >
                             <span className="mr-1 sm:mr-2">Explore {title}</span>
                             <svg
@@ -169,16 +169,16 @@ export default function ProfessionalCards({ className = '' }: ProfessionalCardsP
                 <div className="text-center mb-12 sm:mb-16 lg:mb-20">
                     <div className="inline-flex items-center justify-center p-2 sm:p-3 bg-gradient-to-r from-cyan-400/10 via-cyan-400/20 to-cyan-400/10 rounded-full mb-6 sm:mb-8 border border-cyan-400/20">
                         <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-cyan-400 rounded-full animate-pulse shadow-sm shadow-cyan-400/50"></div>
-                        <span className="mx-3 sm:mx-4 text-cyan-400 text-xs sm:text-sm font-semibold uppercase tracking-wider font-brand">Professional Services</span>
+                        <span className="mx-3 sm:mx-4 text-cyan-400 text-sm sm:text-base font-semibold uppercase tracking-wider font-brand">Professional Services</span>
                         <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-cyan-400 rounded-full animate-pulse shadow-sm shadow-cyan-400/50"></div>
                     </div>
 
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 sm:mb-8 font-heading">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 sm:mb-8 font-heading">
                         Engineering <span className="text-gradient enhanced-glow">Excellence</span>
                     </h2>
 
                     <div className="max-w-4xl mx-auto">
-                        <p className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed mb-4 sm:mb-6 px-4">
+                        <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 leading-relaxed mb-4 sm:mb-6 px-4">
                             Discover our comprehensive range of professional services, combining cutting-edge aerospace | aeronautical | mechanical engineering
                             with innovative software development to deliver exceptional solutions.
                         </p>

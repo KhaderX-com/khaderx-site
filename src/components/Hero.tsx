@@ -52,7 +52,7 @@ export default function Hero({ className = '' }: HeroProps) {
                     <div className="mb-6 sm:mb-8 space-y-4 sm:space-y-6">
                         <div className="relative">
                             <h1
-                                className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight font-heading text-white hero-text-shadow"
+                                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight font-heading text-white hero-text-shadow"
                             >
                                 <span className="block sm:inline">Engineering Tomorrow,</span>
                                 <br className="hidden sm:block" />
@@ -76,14 +76,14 @@ export default function Hero({ className = '' }: HeroProps) {
                             {/* Aerospace | Aeronautical | Mechanical Engineer Developer */}
                             <div className="text-gray-100 leading-relaxed space-y-3 drop-shadow w-1/2 sm:w-auto">
                                 <div className="flex flex-wrap items-center gap-2 sm:gap-2">
-                                    <span className="text-gray-100 font-bold text-lg sm:text-sm md:text-base lg:text-lg">Aerospace | Aeronautical | Mechanical</span>
-                                    <span className="text-cyan-400 font-bold text-lg sm:text-sm md:text-base lg:text-lg">Engineer</span>
-                                    <span className="text-cyan-400 font-bold text-lg sm:text-sm md:text-base lg:text-lg">×</span>
-                                    <span className="text-cyan-400 font-bold text-lg sm:text-sm md:text-base lg:text-lg">Developer</span>
-                                    <span className="text-cyan-400 font-bold text-lg sm:text-sm md:text-base lg:text-lg">×</span>
-                                    <span className="text-cyan-400 font-bold text-lg sm:text-sm md:text-base lg:text-lg">Entrepreneur</span>
+                                    <span className="text-gray-100 font-bold text-xl sm:text-lg md:text-xl lg:text-2xl">Aerospace | Aeronautical | Mechanical</span>
+                                    <span className="text-cyan-400 font-bold text-xl sm:text-lg md:text-xl lg:text-2xl">Engineer</span>
+                                    <span className="text-cyan-400 font-bold text-xl sm:text-lg md:text-xl lg:text-2xl">×</span>
+                                    <span className="text-cyan-400 font-bold text-xl sm:text-lg md:text-xl lg:text-2xl">Developer</span>
+                                    <span className="text-cyan-400 font-bold text-xl sm:text-lg md:text-xl lg:text-2xl">×</span>
+                                    <span className="text-cyan-400 font-bold text-xl sm:text-lg md:text-xl lg:text-2xl">Entrepreneur</span>
                                 </div>
-                                <p className="text-gray-100 leading-relaxed text-base sm:text-sm md:text-base lg:text-lg font-semibold">
+                                <p className="text-gray-100 leading-relaxed text-lg sm:text-base md:text-lg lg:text-xl font-semibold">
                                     Merging Engineering and Software Development into one powerful, innovative ecosystem.
                                 </p>
                             </div>
