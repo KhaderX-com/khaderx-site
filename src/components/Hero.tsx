@@ -12,17 +12,33 @@ export default function Hero({ className = '' }: HeroProps) {
             {/* Dark Background with Neon Accent */}
             <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />
 
-            {/* Hero Image - Full Width */}
+            {/* Hero Image - Responsive: Vertical on mobile, Horizontal on desktop */}
             <div className="relative w-full h-full">
-                <Image
-                    src="/images/New-Logo/main-hero-horizontal-1920-1280.jpg"
-                    alt="KhaderX aerospace | aeronautical | mechanical engineering hero - cutting-edge technology and innovation"
-                    fill
-                    className="object-cover object-center opacity-100"
-                    priority
-                    quality={95}
-                    sizes="100vw"
-                />
+                {/* Mobile/Portrait - Vertical Images */}
+                <div className="block md:hidden">
+                    <Image
+                        src="/images/New-Logo/main-hero-vertical-1333-2000.jpg"
+                        alt="KhaderX aerospace | aeronautical | mechanical engineering hero - cutting-edge technology and innovation"
+                        fill
+                        className="object-cover object-center opacity-100"
+                        priority
+                        quality={95}
+                        sizes="100vw"
+                    />
+                </div>
+                
+                {/* Desktop/Landscape - Horizontal Images */}
+                <div className="hidden md:block">
+                    <Image
+                        src="/images/New-Logo/main-hero-horizontal-1920-1280.jpg"
+                        alt="KhaderX aerospace | aeronautical | mechanical engineering hero - cutting-edge technology and innovation"
+                        fill
+                        className="object-cover object-center opacity-100"
+                        priority
+                        quality={95}
+                        sizes="100vw"
+                    />
+                </div>
 
                 {/* Subtle neon cyan overlay for brand consistency */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20" />
