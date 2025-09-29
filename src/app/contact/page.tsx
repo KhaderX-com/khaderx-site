@@ -116,9 +116,9 @@ export default function Contact() {
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                                 </svg>
                                             </div>
-                                            <div className="text-center sm:text-left">
-                                                <span className="block text-lg sm:text-xl font-semibold text-white">Start a Conversation</span>
-                                                <span className="block text-sm sm:text-base font-medium text-cyan-300">contact@khaderx.com</span>
+                                            <div className="text-center space-y-2">
+                                                <span className="block text-xl sm:text-2xl font-semibold text-white">Start a Conversation</span>
+                                                <span className="block text-xl sm:text-2xl font-semibold text-neon-cyan leading-tight">contact@khaderx.com</span>
                                             </div>
                                         </div>
                                     </a>
@@ -417,5 +417,10 @@ export default function Contact() {
         </PageTransition>
     );
 }
+
+
+
+
+
 
 

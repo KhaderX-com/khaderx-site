@@ -219,24 +219,20 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.25rem;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.35s ease;
 }
 
 .contact-cta-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 20px 45px rgba(0, 229, 255, 0.18);
+  box-shadow: 0 24px 55px rgba(0, 229, 255, 0.18);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   .contact-cta-card {
-    flex-direction: row;
-    text-align: left;
-    gap: 1.25rem;
+    gap: 1.5rem;
   }
 }
-
 /* Neon triangle pulse animation */
 @keyframes neonPulse {
 
@@ -871,6 +867,8 @@ img {
     /* 22px */
   }
 }
+
+
 
 
 
