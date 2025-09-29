@@ -5,7 +5,7 @@ export default function StructuredData() {
         "name": "KhaderX",
         "alternateName": "Khader Abueltayef",
         "url": "https://khaderx.com",
-        "logo": "https://khaderx.com/images/logo/logo-3-removebg-preview.png",
+        "logo": "https://khaderx.com/images/New-Logo/KhaderX-KX-Logo-Cyan.png",
         "description": "Aerospace | Aeronautical | Mechanical Engineer & Python Developer specializing in engineering solutions, aeroelasticity tools, and innovative software development.",
         "foundingDate": "2024",
         "founder": {

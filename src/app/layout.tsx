@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Inter, Orbitron } from "next/font/google";
 import "./globals.css";
 import StructuredData from "@/components/StructuredData";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
@@ -8,11 +8,33 @@ import TransitionProvider from "@/components/TransitionProvider";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
+  fallback: ["system-ui", "-apple-system", "sans-serif"],
+  preload: true,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
+  fallback: ["Menlo", "Monaco", "Courier New", "monospace"],
+});
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
+  fallback: ["system-ui", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+  preload: true,
+});
+
+const orbitron = Orbitron({
+  variable: "--font-orbitron",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  display: "swap",
+  fallback: ["Impact", "Arial Black", "sans-serif"],
 });
 
 export const metadata: Metadata = {
@@ -60,9 +82,14 @@ export const metadata: Metadata = {
     creator: "@KhaderX",
   },
   icons: {
-    icon: "/images/New-Logo/KhaderX-KX-Logo-Cyan-corner.png",
+    icon: [
+      { url: "/images/New-Logo/KhaderX-KX-Logo-Cyan-corner.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/New-Logo/KhaderX-KX-Logo-Cyan-corner.png", sizes: "16x16", type: "image/png" }
+    ],
     shortcut: "/images/New-Logo/KhaderX-KX-Logo-Cyan-corner.png",
-    apple: "/images/New-Logo/KhaderX-KX-Logo-Cyan-corner.png",
+    apple: [
+      { url: "/images/New-Logo/KhaderX-KX-Logo-Cyan-corner.png", sizes: "180x180", type: "image/png" }
+    ],
   },
   metadataBase: new URL("https://khaderx.com"),
 };
@@ -76,11 +103,33 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <head>
         <StructuredData />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        {/* Preload critical hero images for better LCP */}
+        <link
+          rel="preload"
+          as="image"
+          href="/images/New-Logo/main-hero-horizontal-1920-1280.jpg"
+          media="(min-width: 768px)"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/New-Logo/main-hero-vertical-1333-2000.jpg"
+          media="(max-width: 767px)"
+          fetchPriority="high"
+        />
+        {/* Preload favicon for immediate loading */}
+        <link
+          rel="preload"
+          as="image"
+          href="/images/New-Logo/KhaderX-KX-Logo-Cyan-corner.png"
+          fetchPriority="low"
+        />
+        {/* DNS prefetch for any external resources */}
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${orbitron.variable} antialiased bg-black text-white min-h-screen`}
       >
         <TransitionProvider>
           {children}

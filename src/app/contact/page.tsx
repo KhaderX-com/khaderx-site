@@ -1,8 +1,16 @@
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
 import PageTransition from '@/components/PageTransition';
 import type { Metadata } from "next";
+import { lazy, Suspense } from 'react';
+
+// Lazy load Footer for better performance
+const Footer = lazy(() => import('@/components/Footer'));
+
+// Loading component
+const ComponentLoader = () => (
+    <div className="w-full h-32 bg-gradient-to-r from-gray-900 to-black animate-pulse rounded-lg" />
+);
 
 export const metadata: Metadata = {
     title: "Contact & About",
@@ -395,7 +403,9 @@ export default function Contact() {
                         </div>
                     </main>
 
-                    <Footer />
+                    <Suspense fallback={<ComponentLoader />}>
+                        <Footer />
+                    </Suspense>
                 </div>
             </div>
         </PageTransition>

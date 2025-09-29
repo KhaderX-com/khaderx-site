@@ -1,33 +1,32 @@
 'use client';
 
-import { motion, Transition } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 interface PageTransitionProps {
   children: React.ReactNode;
 }
 
+// Simplified animation variants for better performance
 const pageVariants = {
   initial: {
     opacity: 0,
-    y: 20,
-    scale: 0.98,
+    y: 10,
   },
   in: {
     opacity: 1,
     y: 0,
-    scale: 1,
   },
   out: {
     opacity: 0,
-    y: -20,
-    scale: 0.98,
+    y: -10,
   }
 };
 
-const pageTransition: Transition = {
-  type: 'tween',
-  ease: 'anticipate',
-  duration: 0.4
+// Optimized transition settings
+const pageTransition = {
+  type: 'tween' as const,
+  duration: 0.3,
+  ease: [0.25, 0.46, 0.45, 0.94] as const,
 };
 
 export default function PageTransition({ children }: PageTransitionProps) {
