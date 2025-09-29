@@ -64,7 +64,7 @@ export default function Hero({ className = '' }: HeroProps) {
                         <div className="space-y-3 sm:space-y-3 w-full sm:w-auto">
                             <div className="flex items-center space-x-3 sm:space-x-4 w-1/2 sm:w-auto">
                                 <div className="w-12 sm:w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-transparent"></div>
-                                <span className="text-cyan-400 text-base sm:text-sm font-semibold uppercase tracking-wider">Professional Excellence</span>
+                                {/* <span className="text-cyan-400 text-base sm:text-sm font-semibold uppercase tracking-wider">Professional Excellence</span> */}
                             </div>
 
                             {/* Aerospace | Aeronautical | Mechanical Engineer Developer */}
