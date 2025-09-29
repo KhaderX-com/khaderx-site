@@ -1,4 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
+
+/* Custom Font: MADE Waffle Soft */
+@font-face {
+  font-family: 'MADE Waffle Soft';
+  src: url('/fonts/MADEWaffleSoft.otf') format('opentype'),
+       url('/fonts/MADEWaffleSoft.woff2') format('woff2'),
+       url('/fonts/MADEWaffleSoft.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* Smooth scrolling for the entire document */
 html {
@@ -6,25 +18,138 @@ html {
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* KhaderX Brand Colors - Always Dark Mode */
+  --background: #000000;
+  --foreground: #ffffff;
+  --primary-cyan: #00E5FF;
+  --accent-orange: #FF6A00;
+  --secondary-gray: #1a1a1a;
+  --tertiary-gray: #2a2a2a;
+  
+  /* Font Variables */
+  --font-brand: "MADE Waffle Soft", "Inter", sans-serif;
+  --font-heading: "MADE Waffle Soft", "Orbitron", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-brand);
+  /* Ensure always dark - no system preference override */
+  min-height: 100vh;
+}
+
+/* Global dark mode enforcement */
+* {
+  border-color: var(--tertiary-gray);
+}
+
+/* Enhanced Neon glow effects */
+.neon-glow {
+  box-shadow: 0 0 10px var(--primary-cyan), 0 0 20px var(--primary-cyan), 0 0 30px var(--primary-cyan);
+}
+
+.neon-glow-intense {
+  box-shadow: 0 0 15px var(--primary-cyan), 0 0 30px var(--primary-cyan), 0 0 45px var(--primary-cyan), 0 0 60px var(--primary-cyan);
+}
+
+/* Neon triangle pulse animation */
+@keyframes neonPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px #00E5FF) drop-shadow(0 0 10px #00E5FF) drop-shadow(0 0 15px #00E5FF);
+  }
+  50% {
+    filter: drop-shadow(0 0 10px #00E5FF) drop-shadow(0 0 20px #00E5FF) drop-shadow(0 0 30px #00E5FF) drop-shadow(0 0 40px #00E5FF);
+  }
+}
+
+/* Subtle breathing animation for triangles */
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.neon-text-glow {
+  color: var(--primary-cyan);
+  text-shadow: 0 0 10px var(--primary-cyan), 0 0 20px var(--primary-cyan), 0 0 30px var(--primary-cyan);
+}
+
+/* Subtle cyan accent borders */
+.cyan-border {
+  border: 1px solid var(--primary-cyan);
+}
+
+/* Font utility classes */
+.font-brand {
+  font-family: var(--font-brand);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+/* Neon Triangle Glow Intensity Classes */
+.neon-triangle-low {
+  filter: drop-shadow(0 0 5px #00E5FF) drop-shadow(0 0 10px #00E5FF);
+  transition: all 0.3s ease;
+}
+
+.neon-triangle-medium {
+  filter: drop-shadow(0 0 8px #00E5FF) drop-shadow(0 0 15px #00E5FF) drop-shadow(0 0 25px #00E5FF);
+  transition: all 0.3s ease;
+}
+
+.neon-triangle-high {
+  filter: drop-shadow(0 0 10px #00E5FF) drop-shadow(0 0 20px #00E5FF) drop-shadow(0 0 35px #00E5FF) drop-shadow(0 0 50px #00E5FF);
+  transition: all 0.3s ease;
+}
+
+.neon-triangle-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Triangle size classes */
+.neon-triangle-size-sm {
+  width: 32px;
+  height: 32px;
+}
+
+.neon-triangle-size-md {
+  width: 40px;
+  height: 40px;
+}
+
+.neon-triangle-size-lg {
+  width: 60px;
+  height: 60px;
+}
+
+.neon-triangle-size-xl {
+  width: 80px;
+  height: 80px;
+}
+
+/* Neon triangle hover effects */
+.neon-triangle-low:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px #00E5FF) drop-shadow(0 0 15px #00E5FF) drop-shadow(0 0 22px #00E5FF);
+}
+
+.neon-triangle-medium:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 12px #00E5FF) drop-shadow(0 0 20px #00E5FF) drop-shadow(0 0 30px #00E5FF) drop-shadow(0 0 40px #00E5FF);
+}
+
+.neon-triangle-high:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 15px #00E5FF) drop-shadow(0 0 25px #00E5FF) drop-shadow(0 0 40px #00E5FF) drop-shadow(0 0 60px #00E5FF) drop-shadow(0 0 80px #00E5FF);
 }
 
 /* Improve image rendering quality */
@@ -41,19 +166,28 @@ img {
   zoom: 1 !important;
 }
 
-/* Hero background without zoom/scaling - mobile-friendly */
+/* Modern dark hero with new branding */
 .hero-background {
-  background-image: url('/images/hero/hero-airplane-cyan.png');
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  /* Remove fixed attachment for mobile compatibility */
   background-attachment: scroll;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: auto;
+  position: relative;
 }
 
-/* Fixed attachment only on larger screens */
+.hero-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(0, 229, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Responsive hero image handling */
 @media (min-width: 768px) {
   .hero-background {
     background-attachment: fixed;
@@ -80,4 +214,229 @@ img {
     min-height: 44px;
     min-width: 44px;
   }
+}
+
+/* Navbar spacing utilities to prevent content overlap */
+.navbar-safe-top {
+  padding-top: 4rem; /* 64px - matches navbar height */
+}
+
+.navbar-safe-margin {
+  margin-top: 4rem; /* 64px - matches navbar height */
+}
+
+/* For sections that need to start immediately after navbar */
+.after-navbar {
+  margin-top: 4rem; /* 64px - matches navbar height */
+}
+
+/* Professional Cards Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-up-1 {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0ms;
+  opacity: 0;
+}
+
+.animate-fade-in-up-2 {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 150ms;
+  opacity: 0;
+}
+
+.animate-fade-in-up-3 {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 300ms;
+  opacity: 0;
+}
+
+.animate-fade-in-up-4 {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 450ms;
+  opacity: 0;
+}
+
+/* Advanced card effects */
+.card-gradient-border {
+  background: linear-gradient(135deg, transparent, rgba(0, 229, 255, 0.1), transparent);
+}
+
+.card-hover-glow {
+  box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.1),
+              0 4px 20px -2px rgba(0, 0, 0, 0.5),
+              0 0 40px -8px rgba(0, 229, 255, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover-glow:hover {
+  box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.3),
+              0 8px 40px -4px rgba(0, 0, 0, 0.7),
+              0 0 60px -10px rgba(0, 229, 255, 0.2);
+}
+
+/* Enhanced UX Design Utilities */
+
+/* Interactive Elements */
+.interactive-element {
+  transition: all 300ms ease-out;
+}
+
+.interactive-element:hover {
+  transform: scale(1.05);
+}
+
+.interactive-element:active {
+  transform: scale(0.95);
+}
+
+/* Enhanced Glass Effect */
+.glass-card {
+  background: linear-gradient(to bottom right, rgba(17, 24, 39, 0.9), rgba(31, 41, 55, 0.7));
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(55, 65, 81, 0.5);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 229, 255, 0.3);
+  box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.1);
+}
+
+/* Professional Button Styles */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  border-radius: 0.75rem;
+  background: linear-gradient(to right, #00E5FF, #00C2FF);
+  color: #000000;
+  font-family: var(--font-brand);
+  transition: all 300ms ease;
+  transform: scale(1);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to right, #B2DFDB, #00E5FF);
+  transform: scale(1.05);
+  box-shadow: 0 25px 50px -12px rgba(0, 229, 255, 0.3);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  background: transparent;
+  border: 2px solid rgba(0, 229, 255, 0.5);
+  color: #00E5FF;
+  font-family: var(--font-brand);
+  transition: all 300ms ease;
+  transform: scale(1);
+}
+
+.btn-secondary:hover {
+  background: rgba(0, 229, 255, 0.1);
+  border-color: #00E5FF;
+  transform: scale(1.05);
+  box-shadow: 0 20px 25px -5px rgba(0, 229, 255, 0.2);
+}
+
+/* Enhanced Text Effects */
+.text-gradient {
+  background: linear-gradient(to right, #00E5FF, #B2DFDB, #00C2FF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Improved Card Animations */
+@keyframes cardFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.card-floating {
+  animation: cardFloat 6s ease-in-out infinite;
+}
+
+/* Enhanced Glow Effects */
+.enhanced-glow {
+  filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
+}
+
+.enhanced-glow:hover {
+  filter: drop-shadow(0 0 20px rgba(0, 229, 255, 0.5));
+}
+
+/* Professional Spacing System */
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 640px) {
+  .section-padding {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+.content-padding {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .content-padding {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content-padding {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.max-content-width {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Enhanced Focus States */
+.focus-visible:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 229, 255, 0.5), 0 0 0 4px rgba(0, 0, 0, 1);
 }

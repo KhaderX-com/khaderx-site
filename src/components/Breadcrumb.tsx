@@ -55,43 +55,49 @@ export default function Breadcrumb({ className = '', customItems }: BreadcrumbPr
     }
 
     return (
-        <nav className={`w-full text-sm text-gray-600 mb-6 ${className}`} aria-label="Breadcrumb">
+        <nav className={`w-full mb-8 ${className}`} aria-label="Breadcrumb">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <ol className="flex items-baseline gap-1">
-                    {breadcrumbs.map((item, index) => (
-                        <li key={item.href} className="flex items-baseline">
-                            {index > 0 && (
-                                <svg
-                                    className="w-3 h-3 text-gray-400 mx-1.5 mt-0.5 flex-shrink-0"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                    aria-hidden="true"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M9 5l7 7-7 7"
-                                    />
-                                </svg>
-                            )}
+                <div className="flex items-center p-4 bg-gradient-to-r from-gray-900/80 to-gray-800/60 backdrop-blur-sm rounded-xl border border-gray-700/50 shadow-lg">
+                    <ol className="flex items-center gap-2">
+                        {breadcrumbs.map((item, index) => (
+                            <li key={item.href} className="flex items-center">
+                                {index > 0 && (
+                                    <svg
+                                        className="w-4 h-4 text-gray-500 mx-3 flex-shrink-0"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M9 5l7 7-7 7"
+                                        />
+                                    </svg>
+                                )}
 
-                            {index === breadcrumbs.length - 1 ? (
-                                <span className="font-medium text-[#0A2540] inline-block" aria-current="page">
-                                    {item.label}
-                                </span>
-                            ) : (
-                                <Link
-                                    href={item.href}
-                                    className="hover:text-[#00C2FF] transition-colors duration-200 font-medium inline-block"
-                                >
-                                    {item.label}
-                                </Link>
-                            )}
-                        </li>
-                    ))}
-                </ol>
+                                {index === breadcrumbs.length - 1 ? (
+                                    <div className="flex items-center">
+                                        <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 shadow-sm shadow-cyan-400/50"></div>
+                                        <span className="font-semibold text-cyan-400 text-sm font-brand" aria-current="page">
+                                            {item.label}
+                                        </span>
+                                    </div>
+                                ) : (
+                                    <Link
+                                        href={item.href}
+                                        className="group flex items-center hover:text-cyan-400 transition-all duration-300 font-medium text-sm font-brand text-gray-300 hover:scale-105"
+                                    >
+                                        <div className="w-1.5 h-1.5 bg-gray-500 group-hover:bg-cyan-400 rounded-full mr-3 transition-colors duration-300"></div>
+                                        {item.label}
+                                    </Link>
+                                )}
+                            </li>
+                        ))}
+                    </ol>
+                </div>
             </div>
         </nav>
     );

@@ -6,12 +6,12 @@ export default function StructuredData() {
         "alternateName": "Khader Abueltayef",
         "url": "https://khaderx.com",
         "logo": "https://khaderx.com/images/logo/logo-3-removebg-preview.png",
-        "description": "Aerospace Engineer & Python Developer specializing in engineering solutions, aeroelasticity tools, and innovative software development.",
+        "description": "Aerospace | Aeronautical | Mechanical Engineer & Python Developer specializing in engineering solutions, aeroelasticity tools, and innovative software development.",
         "foundingDate": "2024",
         "founder": {
             "@type": "Person",
             "name": "Khader Abueltayef",
-            "jobTitle": "Aerospace Engineer & Python Developer",
+            "jobTitle": "Aerospace | Aeronautical | Mechanical Engineer & Python Developer",
             "email": "contact@khaderx.com",
             "url": "https://khaderx.com",
             "sameAs": [
@@ -52,7 +52,7 @@ export default function StructuredData() {
         "@type": "WebSite",
         "name": "KhaderX",
         "url": "https://khaderx.com",
-        "description": "Aerospace Engineer & Python Developer specializing in engineering solutions, aeroelasticity tools, and innovative software development.",
+        "description": "Aerospace | Aeronautical | Mechanical Engineer & Python Developer specializing in engineering solutions, aeroelasticity tools, and innovative software development.",
         "author": {
             "@type": "Person",
             "name": "Khader Abueltayef"
@@ -69,10 +69,10 @@ export default function StructuredData() {
         "provider": {
             "@type": "Person",
             "name": "Khader Abueltayef",
-            "jobTitle": "Aerospace Engineer & Python Developer"
+            "jobTitle": "Aerospace | Aeronautical | Mechanical Engineer & Python Developer"
         },
         "serviceType": [
-            "Aerospace Engineering",
+            "Aerospace | Aeronautical | Mechanical Engineering",
             "Python Development",
             "Aeroelasticity Analysis",
             "Technical Consulting",

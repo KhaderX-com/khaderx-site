@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import StructuredData from "@/components/StructuredData";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import TransitionProvider from "@/components/TransitionProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     default: "KhaderX - Engineering Tomorrow",
     template: "%s | KhaderX"
   },
-  description: "Aerospace Engineer & Python Developer specializing in engineering solutions, aeroelasticity tools, and innovative software development. Engineering Tomorrow with cutting-edge technology.",
+  description: "Engineering Tomorrow, Today - Aerospace | Aeronautical | Mechanical Engineer & Python Developer delivering cutting-edge solutions in aeroelasticity, innovative software development, and engineering consulting.",
   keywords: ["aerospace engineering", "python development", "aeroelasticity", "engineering consulting", "software development", "technical solutions"],
   authors: [{ name: "Khader Abueltayef", url: "https://khaderx.com" }],
   creator: "KhaderX",
@@ -41,12 +42,12 @@ export const metadata: Metadata = {
     url: "https://khaderx.com",
     siteName: "KhaderX",
     title: "KhaderX - Engineering Tomorrow",
-    description: "Aerospace Engineer & Python Developer specializing in engineering solutions, aeroelasticity tools, and innovative software development.",
+    description: "Engineering Tomorrow, Today - Aerospace | Aeronautical | Mechanical Engineer & Python Developer delivering cutting-edge solutions in aeroelasticity, innovative software development, and engineering consulting.",
     images: [
       {
-        url: "/images/hero/hero-airplane-cyan-high-quality-4.png",
-        width: 1200,
-        height: 630,
+        url: "/images/New-Logo/main-hero-horizontal-1920-1280.jpg",
+        width: 2000,
+        height: 1333,
         alt: "KhaderX - Aerospace Engineering and Software Development",
       },
     ],
@@ -54,14 +55,14 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "KhaderX - Engineering Tomorrow",
-    description: "Aerospace Engineer & Python Developer specializing in engineering solutions, aeroelasticity tools, and innovative software development.",
-    images: ["/images/hero/hero-airplane-cyan-high-quality-4.png"],
+    description: "Engineering Tomorrow, Today - Aerospace | Aeronautical | Mechanical Engineer & Python Developer delivering cutting-edge solutions in aeroelasticity, innovative software development, and engineering consulting.",
+    images: ["/images/New-Logo/main-hero-horizontal-1920-1280.jpg"],
     creator: "@KhaderX",
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+    icon: "/images/New-Logo/KhaderX-KX-Logo-Cyan-corner.png",
+    shortcut: "/images/New-Logo/KhaderX-KX-Logo-Cyan-corner.png",
+    apple: "/images/New-Logo/KhaderX-KX-Logo-Cyan-corner.png",
   },
   metadataBase: new URL("https://khaderx.com"),
 };
@@ -72,14 +73,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <StructuredData />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white min-h-screen`}
       >
-        {children}
+        <TransitionProvider>
+          {children}
+        </TransitionProvider>
         <ScrollToTopButton />
       </body>
     </html>
