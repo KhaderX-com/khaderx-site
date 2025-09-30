@@ -4,7 +4,7 @@
 
 # KhaderX
 
-**Engineering Tomorrow** - Professional portfolio website showcasing aerospace engineering expertise and software development services.
+**Engineering Tomorrow** - Professional portfolio website showcasing aerospace | aeronautical | mechanical engineering expertise and software development services.
 
 ## Overview
 
