@@ -80,5 +80,20 @@ export const servicesData: ServiceCardProps[] = [
             "Dependency management",
             "Documentation & testing"
         ]
+    },
+    {
+        title: "AI Integration",
+        subtitle: "Empower your applications with intelligent features, enhancing user experiences and driving innovation.",
+        description: "Empower your applications with intelligent features, enhancing user experiences and driving innovation.",
+        icon: (
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 4a6 6 0 110 12 6 6 0 010-12z" />
+            </svg>
+        ),
+        features: [
+            "Personalized User Experiences",
+            "Smart Workflow Automation",
+            "Intelligent Chatbots"
+        ]
     }
 ];
