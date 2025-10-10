@@ -1,4 +1,4 @@
-import Navbar from '@/components/Navbar';
+import Navbar from '@/components/navbar/Navbar';
 import Breadcrumb from '@/components/Breadcrumb';
 import PageTransition from '@/components/PageTransition';
 import Link from 'next/link';
@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 import { lazy, Suspense } from 'react';
 
 // Lazy load Footer for better performance
-const Footer = lazy(() => import('@/components/Footer'));
+const Footer = lazy(() => import('@/components/footer/Footer'));
 
 export const metadata: Metadata = {
     title: "Services",

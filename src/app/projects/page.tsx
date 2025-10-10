@@ -1,12 +1,12 @@
 import { Suspense, lazy } from 'react';
-import Navbar from '@/components/Navbar';
+import Navbar from '@/components/navbar/Navbar';
 import Breadcrumb from '@/components/Breadcrumb';
 import PageTransition from '@/components/PageTransition';
 import LoadingSpinner from '@/components/LoadingSpinner';
 import type { Metadata } from "next";
 
 // Lazy load Footer component
-const Footer = lazy(() => import('@/components/Footer'));
+const Footer = lazy(() => import('@/components/footer/Footer'));
 
 export const metadata: Metadata = {
     title: "Projects",

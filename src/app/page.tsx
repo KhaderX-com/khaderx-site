@@ -1,12 +1,12 @@
-import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
+import Navbar from '@/components/navbar/Navbar';
+import Hero from '@/components/hero/Hero';
 import PageTransition from '@/components/PageTransition';
 import type { Metadata } from "next";
 import { lazy, Suspense } from 'react';
 
 // Lazy load non-critical components
-const ProfessionalCards = lazy(() => import('@/components/ProfessionalCards'));
-const Footer = lazy(() => import('@/components/Footer'));
+const ServicesSection = lazy(() => import('@/components/services-section/ServicesSection'));
+const Footer = lazy(() => import('@/components/footer/Footer'));
 
 // Loading components for better UX
 const ComponentLoader = () => (
@@ -34,7 +34,7 @@ export default function Home() {
         <Navbar />
         <Hero />
         <Suspense fallback={<ComponentLoader />}>
-          <ProfessionalCards />
+          <ServicesSection />
         </Suspense>
         <Suspense fallback={<ComponentLoader />}>
           <Footer />
