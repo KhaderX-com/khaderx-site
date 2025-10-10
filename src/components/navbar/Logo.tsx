@@ -10,12 +10,12 @@ export default function Logo() {
                     glowIntensity="medium"
                 />
                 <span className="text-xl sm:text-2xl font-bold tracking-wider transition-colors duration-300 font-heading inline-flex items-baseline">
-                    <span className="text-cyan-400 group-hover:text-cyan-300 inline-block">K</span>
-                    <span className="text-white group-hover:text-gray-200 inline-block">hader</span>
-                    <span className="text-cyan-400 group-hover:text-cyan-300 inline-block">X</span>
-                    <span className="text-gray-400 group-hover:text-gray-300 mx-1 sm:mx-2 inline-block">-</span>
-                    <span className="text-cyan-400 group-hover:text-cyan-300 inline-block">K</span>
-                    <span className="text-cyan-400 group-hover:text-cyan-300 inline-block">X</span>
+                    <span className="text-cyan-400 inline-block">K</span>
+                    <span className="text-white inline-block">hader</span>
+                    <span className="text-cyan-400 inline-block">X</span>
+                    <span className="text-gray-400 mx-1 sm:mx-2 inline-block">-</span>
+                    <span className="text-cyan-400 inline-block">K</span>
+                    <span className="text-cyan-400 inline-block">X</span>
                 </span>
             </Link>
         </div>

@@ -9,8 +9,8 @@
 }
 
 .contact-cta-card:hover {
-    box-shadow: 0 20px 45px rgba(0, 229, 255, 0.2);
-    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 229, 255, 0.1);
+    transform: translateY(-1px);
 }
 
 @media (min-width: 768px) {
