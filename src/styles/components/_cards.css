@@ -5,11 +5,12 @@
     justify-content: center;
     gap: 1.25rem;
     text-align: center;
-    transition: box-shadow 0.35s ease;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .contact-cta-card:hover {
-    box-shadow: 0 24px 55px rgba(0, 229, 255, 0.18);
+    box-shadow: 0 20px 45px rgba(0, 229, 255, 0.2);
+    transform: translateY(-3px);
 }
 
 @media (min-width: 768px) {
@@ -27,13 +28,14 @@
     box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.1),
         0 4px 20px -2px rgba(0, 0, 0, 0.5),
         0 0 40px -8px rgba(0, 229, 255, 0.05);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease;
 }
 
 .card-hover-glow:hover {
     box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.3),
-        0 8px 40px -4px rgba(0, 0, 0, 0.7),
+        0 10px 40px -4px rgba(0, 0, 0, 0.7),
         0 0 60px -10px rgba(0, 229, 255, 0.2);
+    transform: translateY(-4px);
 }
 
 /* Enhanced Glass Effect */
@@ -43,13 +45,80 @@
     backdrop-filter: blur(16px);
     border: 1px solid rgba(55, 65, 81, 0.5);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .glass-card:hover {
-    border-color: rgba(0, 229, 255, 0.3);
-    box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.1);
+    border-color: rgba(0, 229, 255, 0.35);
+    box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.15),
+        0 28px 55px -12px rgba(0, 0, 0, 0.3),
+        0 0 50px rgba(0, 229, 255, 0.12);
+    transform: translateY(-4px);
 }
 
 .card-floating {
     animation: cardFloat 6s ease-in-out infinite;
+}
+
+/* Smooth transitions for card content */
+.glow-card-static h3,
+.glow-card-static h2 {
+    transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+.glow-card-static:hover h3,
+.glow-card-static:hover h2 {
+    color: rgba(255, 255, 255, 0.98);
+    text-shadow: 0 0 15px rgba(0, 216, 255, 0.3);
+}
+
+.glow-card-static p,
+.glow-card-static li {
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.glow-card-static:hover p,
+.glow-card-static:hover li {
+    color: rgba(255, 255, 255, 0.92);
+}
+
+/* Stagger effect for feature list items */
+.glow-card-static li {
+    transform: translateX(0);
+}
+
+.glow-card-static:hover li:nth-child(1) {
+    transform: translateX(2px);
+    transition-delay: 0.03s;
+}
+
+.glow-card-static:hover li:nth-child(2) {
+    transform: translateX(2px);
+    transition-delay: 0.06s;
+}
+
+.glow-card-static:hover li:nth-child(3) {
+    transform: translateX(2px);
+    transition-delay: 0.09s;
+}
+
+.glow-card-static:hover li:nth-child(4) {
+    transform: translateX(2px);
+    transition-delay: 0.12s;
+}
+
+.glow-card-static:hover li:nth-child(5) {
+    transform: translateX(2px);
+    transition-delay: 0.15s;
+}
+
+/* Feature bullet point glow on hover */
+.glow-card-static li span:first-child {
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.glow-card-static:hover li span:first-child {
+    box-shadow: 0 0 10px rgba(111, 0, 255, 0.5),
+        0 0 18px rgba(0, 216, 255, 0.3);
+    transform: scale(1.1);
 }

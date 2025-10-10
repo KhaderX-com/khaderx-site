@@ -32,7 +32,7 @@ export default function ScrollToTopButton() {
             {isVisible && (
                 <button
                     onClick={scrollToTop}
-                    className="group fixed bottom-8 right-8 p-4 bg-gradient-to-br from-gray-900/90 to-gray-800/80 backdrop-blur-md border border-cyan-400/30 text-cyan-400 rounded-2xl shadow-lg shadow-black/20 hover:shadow-cyan-400/5 transition-all duration-200 z-50 hover:scale-102 focus:outline-none focus:ring-2 focus:ring-cyan-400/40 focus:ring-offset-2 focus:ring-offset-black"
+                    className="group fixed bottom-8 left-8 p-4 bg-gradient-to-br from-gray-900/90 to-gray-800/80 backdrop-blur-md border border-cyan-400/30 text-cyan-400 rounded-2xl shadow-lg shadow-black/20 hover:shadow-cyan-400/5 transition-all duration-200 z-50 hover:scale-102 focus:outline-none focus:ring-2 focus:ring-cyan-400/40 focus:ring-offset-2 focus:ring-offset-black"
                     aria-label="Scroll to top"
                     title="Scroll to top"
                 >
