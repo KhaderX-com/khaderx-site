@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+#
+KX_UIUX_Starter_README.md
+QUICK_REFERENCE.md
