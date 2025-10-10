@@ -69,11 +69,14 @@ export async function POST(request: NextRequest) {
         // Check if API key is set
         if (!process.env.GEMINI_API_KEY) {
             console.error('GEMINI_API_KEY is not set in environment variables');
+            console.error('Available env vars:', Object.keys(process.env).filter(key => key.startsWith('GEMINI') || key.startsWith('NEXT_')));
             return NextResponse.json(
                 { error: 'AI service not configured. Please contact support.' },
                 { status: 500 }
             );
         }
+
+        console.log('GEMINI_API_KEY is set:', process.env.GEMINI_API_KEY ? 'Yes (length: ' + process.env.GEMINI_API_KEY.length + ')' : 'No');
 
         // Initialize Gemini model
         // Using gemini-2.5-flash for fast and efficient responses
