@@ -1,0 +1,116 @@
+/* ============================================
+   🛡️ FIRST-AID RESPONSIVE CSS - Battle-Tested
+   Fixes 80% of common breakages
+   ============================================ */
+
+/* Viewport */
+@viewport {
+    width: device-width;
+}
+
+/* Universal box model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Media defaults - never overflow, always scale */
+img,
+svg,
+video,
+canvas {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+html {
+    font-size: 100%;
+    /* Prevent text size adjustment on mobile - progressive enhancement */
+    -webkit-text-size-adjust: 100%;
+    /* iOS Safari */
+    -moz-text-size-adjust: 100%;
+    /* Firefox */
+    text-size-adjust: 100%;
+    /* Modern browsers */
+}
+
+/* Safe container utility */
+.container {
+    width: min(100% - 2rem, var(--content-max));
+    margin-inline: auto;
+}
+
+/* Fluid images inside fixed boxes */
+.img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Utility: wrap long words/URLs */
+.u-wrap {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+/* Auto-grid that wraps cards responsively */
+.auto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+    gap: var(--space-2);
+}
+
+/* Cards variant with larger min size */
+.auto-grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+    gap: clamp(1rem, 2vw, 2rem);
+}
+
+/* Responsive table wrapper */
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table-wrap table {
+    min-width: 600px;
+}
+
+/* Content-aware line lengths */
+.readable-content {
+    max-width: 65ch;
+}
+
+/* Additional responsive helper utilities */
+.overflow-wrap-anywhere {
+    overflow-wrap: anywhere;
+}
+
+.break-words {
+    word-break: break-word;
+}
+
+/* Safe aspect ratios */
+.aspect-16-9 {
+    aspect-ratio: 16 / 9;
+}
+
+.aspect-4-3 {
+    aspect-ratio: 4 / 3;
+}
+
+.aspect-square {
+    aspect-ratio: 1 / 1;
+}
+
+/* ============================================
+   End First-Aid CSS
+   ============================================ */

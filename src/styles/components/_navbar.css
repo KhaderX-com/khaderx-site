@@ -1,0 +1,16 @@
+/* Navbar spacing utilities to prevent content overlap */
+.navbar-safe-top {
+    padding-top: 4rem;
+    /* 64px - matches navbar height */
+}
+
+.navbar-safe-margin {
+    margin-top: 4rem;
+    /* 64px - matches navbar height */
+}
+
+/* For sections that need to start immediately after navbar */
+.after-navbar {
+    margin-top: 4rem;
+    /* 64px - matches navbar height */
+}

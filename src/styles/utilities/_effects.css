@@ -1,0 +1,80 @@
+.neon-glow {
+    box-shadow: 0 0 10px var(--primary-cyan), 0 0 20px var(--primary-cyan), 0 0 30px var(--primary-cyan);
+}
+
+.neon-glow-intense {
+    box-shadow: 0 0 15px var(--primary-cyan), 0 0 30px var(--primary-cyan), 0 0 45px var(--primary-cyan), 0 0 60px var(--primary-cyan);
+}
+
+/* Subtle cyan accent borders */
+.cyan-border {
+    border: 1px solid var(--primary-cyan);
+}
+
+/* Neon Triangle Glow Intensity Classes */
+.neon-triangle-low {
+    filter: drop-shadow(0 0 5px #00E5FF) drop-shadow(0 0 10px #00E5FF);
+    transition: all 0.3s ease;
+}
+
+.neon-triangle-medium {
+    filter: drop-shadow(0 0 8px #00E5FF) drop-shadow(0 0 15px #00E5FF) drop-shadow(0 0 25px #00E5FF);
+    transition: all 0.3s ease;
+}
+
+.neon-triangle-high {
+    filter: drop-shadow(0 0 10px #00E5FF) drop-shadow(0 0 20px #00E5FF) drop-shadow(0 0 35px #00E5FF) drop-shadow(0 0 50px #00E5FF);
+    transition: all 0.3s ease;
+}
+
+.neon-triangle-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Triangle size classes */
+.neon-triangle-size-sm {
+    width: 32px;
+    height: 32px;
+}
+
+.neon-triangle-size-md {
+    width: 40px;
+    height: 40px;
+}
+
+.neon-triangle-size-lg {
+    width: 60px;
+    height: 60px;
+}
+
+.neon-triangle-size-xl {
+    width: 80px;
+    height: 80px;
+}
+
+/* Neon triangle hover effects */
+.neon-triangle-low:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 8px #00E5FF) drop-shadow(0 0 15px #00E5FF) drop-shadow(0 0 22px #00E5FF);
+}
+
+.neon-triangle-medium:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 12px #00E5FF) drop-shadow(0 0 20px #00E5FF) drop-shadow(0 0 30px #00E5FF) drop-shadow(0 0 40px #00E5FF);
+}
+
+.neon-triangle-high:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 15px #00E5FF) drop-shadow(0 0 25px #00E5FF) drop-shadow(0 0 40px #00E5FF) drop-shadow(0 0 60px #00E5FF) drop-shadow(0 0 80px #00E5FF);
+}
+
+/* Enhanced Glow Effects */
+.enhanced-glow {
+    filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
+}
+
+.enhanced-glow:hover {
+    filter: drop-shadow(0 0 20px rgba(0, 229, 255, 0.5));
+}

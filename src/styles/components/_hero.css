@@ -1,0 +1,40 @@
+/* Prevent image resampling artifacts for hero images */
+.hero-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: auto;
+    transform: none !important;
+    zoom: 1 !important;
+}
+
+/* Modern dark hero with new branding */
+.hero-background {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    position: relative;
+}
+
+.hero-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 50%, rgba(0, 229, 255, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Responsive hero image handling */
+@media (min-width: 768px) {
+    .hero-background {
+        background-attachment: fixed;
+    }
+}
+
+/* Hero text shadow utility */
+.hero-text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8), 0 4px 8px rgba(0, 0, 0, 0.6);
+}

@@ -1,0 +1,30 @@
+:root {
+    /* Fluid typography with clamp() */
+    --step--1: clamp(0.875rem, 0.8rem + 0.3vw, 0.95rem);
+    --step-0: clamp(1rem, 0.9rem + 0.6vw, 1.125rem);
+    --step-1: clamp(1.25rem, 1.05rem + 1vw, 1.5rem);
+    --step-2: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
+    --step-3: clamp(2rem, 1.5rem + 2.5vw, 3rem);
+
+    /* Fluid spacing */
+    --space-1: clamp(0.5rem, 0.4rem + 0.6vw, 0.875rem);
+    --space-2: clamp(0.75rem, 0.6rem + 1vw, 1.25rem);
+    --space-3: clamp(1rem, 0.8rem + 1.5vw, 1.75rem);
+    --space-4: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+
+    /* Content max-width */
+    --content-max: 1200px;
+
+    /* KhaderX Brand Colors - Always Dark Mode */
+    --background: #000000;
+    --foreground: #ffffff;
+    --primary-cyan: #00E5FF;
+    --accent-orange: #FF6A00;
+    --secondary-gray: #1a1a1a;
+    --tertiary-gray: #2a2a2a;
+
+    /* Font Variables with Optimized Fallbacks */
+    --font-brand: "MADE Waffle Soft", var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-heading: "MADE Waffle Soft", var(--font-orbitron), Impact, Arial Black, system-ui, sans-serif;
+    --font-mono: var(--font-geist-mono), Menlo, Monaco, "Courier New", ui-monospace, SFMono-Regular, monospace;
+}
