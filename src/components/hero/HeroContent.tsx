@@ -1,4 +1,3 @@
-
 export default function HeroContent() {
     return (
         <div className="absolute inset-0 flex flex-col items-start justify-start pointer-events-none">
@@ -7,10 +6,10 @@ export default function HeroContent() {
                 {/* Main Slogan */}
                 <div className="mb-6 sm:mb-8 space-y-4 sm:space-y-6">
                     <div className="relative">
-                        <h1 className="text-fluid-hero font-bold font-heading text-white hero-text-shadow">
+                        <h1 className="text-fluid-hero font-bold font-heading text-white">
                             <span className="block">Engineering Tomorrow,</span>
                             <span className="relative inline-block">
-                                <span className="text-cyan-400 neon-text-glow">Today</span>
+                                <span className="text-cyan-400">Today</span>
                                 <div className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-0.5 sm:h-1 bg-gradient-to-r from-cyan-400 via-cyan-400 to-transparent rounded-full opacity-70 animate-pulse"></div>
                             </span>
                         </h1>

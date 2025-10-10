@@ -4,23 +4,23 @@ interface NeonTriangleProps {
     glowIntensity?: 'low' | 'medium' | 'high';
 }
 
-export default function NeonTriangle({ 
-    size = 'md', 
+export default function NeonTriangle({
+    size = 'md',
     className = '',
-    glowIntensity = 'medium'
+    glowIntensity = 'low'
 }: NeonTriangleProps) {
     const glowClass = `neon-triangle-${glowIntensity}`;
     const sizeClass = `neon-triangle-size-${size}`;
-    
+
     const sizeMap = {
         sm: 32,
         md: 40,
         lg: 60,
         xl: 80
     };
-    
+
     return (
-        <div 
+        <div
             className={`neon-triangle-container ${glowClass} ${sizeClass} ${className}`}
         >
             <svg
@@ -38,15 +38,15 @@ export default function NeonTriangle({
                         <stop offset="50%" stopColor="#00B4D8" stopOpacity="0.9" />
                         <stop offset="100%" stopColor="#0096C7" stopOpacity="0.8" />
                     </linearGradient>
-                    
+
                     {/* Enhanced glow filter for hollow triangle */}
                     <filter id="neonFilter" x="-50%" y="-50%" width="200%" height="200%">
-                        <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-                        <feGaussianBlur stdDeviation="4" result="outerGlow"/>
-                        <feMerge> 
-                            <feMergeNode in="outerGlow"/>
-                            <feMergeNode in="coloredBlur"/>
-                            <feMergeNode in="SourceGraphic"/>
+                        <feGaussianBlur stdDeviation="2" result="coloredBlur" />
+                        <feGaussianBlur stdDeviation="4" result="outerGlow" />
+                        <feMerge>
+                            <feMergeNode in="outerGlow" />
+                            <feMergeNode in="coloredBlur" />
+                            <feMergeNode in="SourceGraphic" />
                         </feMerge>
                     </filter>
                 </defs>
@@ -60,7 +60,7 @@ export default function NeonTriangle({
                     filter="url(#neonFilter)"
                     className="animate-pulse"
                 />
-                
+
                 {/* Inner subtle outline for depth */}
                 <polygon
                     points="50,18 82,72 18,72"

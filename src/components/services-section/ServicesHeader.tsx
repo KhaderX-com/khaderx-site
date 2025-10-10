@@ -8,7 +8,7 @@ export default function ServicesHeader() {
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 sm:mb-8 font-heading">
-                Engineering <span className="text-gradient enhanced-glow">Excellence</span>
+                Engineering <span className="text-cyan-400">Excellence</span>
             </h2>
 
             <div className="max-w-4xl mx-auto">
