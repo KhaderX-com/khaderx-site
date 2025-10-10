@@ -66,6 +66,18 @@
     opacity: 0;
 }
 
+.animate-fade-in-up-5 {
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 600ms;
+    opacity: 0;
+}
+
+.animate-fade-in-up-6 {
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 750ms;
+    opacity: 0;
+}
+
 /* Improved Card Animations */
 @keyframes cardFloat {
 
