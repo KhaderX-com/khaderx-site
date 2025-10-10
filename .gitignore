@@ -113,3 +113,4 @@ TODO.md
 .local/
 *.local.*
 desktop.ini
+.env.example
