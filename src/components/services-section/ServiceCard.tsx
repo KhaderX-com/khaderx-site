@@ -21,7 +21,7 @@ export default function ServiceCard({ title, description, icon, href, features }
                             <CardContent description={description} features={features} />
                         </div>
                     </div>
-                    <CardCTA href={href} title={title} />
+                    <CardCTA href={href} />
                 </div>
             </div>
         </article>
