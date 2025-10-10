@@ -10,8 +10,10 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "@tailwindcss/container-queries": "^0.1.1",
     "framer-motion": "^12.23.22",
+    "lucide-react": "^0.545.0",
     "next": "15.5.2",
     "react": "19.1.0",
     "react-dom": "19.1.0",

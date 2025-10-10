@@ -19,6 +19,15 @@ const nextConfig: NextConfig = {
     // Optimize for performance
     dangerouslyAllowSVG: false,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    // Allow external image domains
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
   // Add compression for static assets
   compress: true,

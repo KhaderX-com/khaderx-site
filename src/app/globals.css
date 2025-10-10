@@ -13,6 +13,7 @@
 @import "../styles/components/_glow.css";
 @import "../styles/components/_hero.css";
 @import "../styles/components/_navbar.css";
+@import "../styles/components/_chatbot.css";
 
 /* Utilities */
 @import "../styles/utilities/_accessibility.css";

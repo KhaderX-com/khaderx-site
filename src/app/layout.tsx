@@ -7,6 +7,7 @@ import TransitionProvider from "@/components/TransitionProvider";
 import PerformanceMonitor from "@/components/PerformanceMonitor";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 import RoutePreloader from "@/components/RoutePreloader";
+import Chatbot from "@/components/chatbot/Chatbot";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -141,6 +142,7 @@ export default function RootLayout({
           {children}
         </TransitionProvider>
         <ScrollToTopButton />
+        <Chatbot />
       </body>
     </html>
   );
