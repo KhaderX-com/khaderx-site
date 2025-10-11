@@ -22,9 +22,9 @@ export default function VocabTMAPage() {
   }) => {
     // Haptic feedback on generate
     haptic?.medium();
-    
+
     const result = await generateCards(params);
-    
+
     // Success or error haptic
     if (result && result.length > 0) {
       haptic?.success();
