@@ -24,6 +24,14 @@ export default function TMAVocabLayout({
                 strategy="beforeInteractive"
             />
 
+            {/* Load Monetag SDK */}
+            <Script
+                src="//libtl.com/sdk.js"
+                data-zone="10023028"
+                data-sdk="show_10023028"
+                strategy="afterInteractive"
+            />
+
             <div className="tma-container min-h-screen bg-gradient-to-br from-gray-900 to-black text-white">
                 {children}
             </div>

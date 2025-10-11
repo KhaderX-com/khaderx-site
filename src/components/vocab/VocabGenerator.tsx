@@ -6,6 +6,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useMonetagAd } from '@/hooks/useMonetagAd';
 
 interface VocabGeneratorProps {
     onGenerate: (params: {
@@ -35,9 +36,16 @@ export function VocabGenerator({ onGenerate, isGenerating }: VocabGeneratorProps
     const [difficulty, setDifficulty] = useState<'beginner' | 'intermediate' | 'advanced'>('intermediate');
     const [language, setLanguage] = useState('en');
 
+    // Initialize Monetag ad hook
+    const { showInAppInterstitial } = useMonetagAd();
+
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         if (topic.trim()) {
+            // Trigger In-app Interstitial ad before generating cards
+            showInAppInterstitial();
+
+            // Call the original onGenerate function
             onGenerate({ topic: topic.trim(), difficulty, language });
         }
     };

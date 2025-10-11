@@ -8,12 +8,14 @@
 import { useEffect } from 'react';
 import { useTelegramWebApp } from '@/hooks/useTelegramWebApp';
 import { useVocabGenerator } from '@/hooks/useVocabGenerator';
+import { useMonetagAd } from '@/hooks/useMonetagAd';
 import { VocabGenerator } from '@/components/vocab/VocabGenerator';
 import { FlashCard } from '@/components/vocab/FlashCard';
 
 export default function VocabTMAPage() {
   const { isReady, user, isInTelegram, initData, webApp, haptic } = useTelegramWebApp();
   const { generateCards, clearCards, isGenerating, error, currentCards } = useVocabGenerator(initData);
+  const { isSDKLoaded } = useMonetagAd();
 
   // Check if in localhost development mode
   const isLocalhost = typeof window !== 'undefined' && window.location.hostname === 'localhost';
@@ -114,6 +116,11 @@ export default function VocabTMAPage() {
                   : "You're testing without Telegram. Open this in Telegram for the full experience!"
                 }
               </p>
+              {isLocalhost && (
+                <p className="text-xs text-blue-500 mt-2">
+                  📢 Monetag SDK: {isSDKLoaded ? '✅ Loaded' : '⏳ Loading...'}
+                </p>
+              )}
             </div>
           </div>
         </div>
