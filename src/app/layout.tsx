@@ -104,7 +104,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark" suppressHydrationWarning>
       <head>
         <StructuredData />
         {/* Preload critical hero images for better LCP */}
@@ -134,6 +134,7 @@ export default function RootLayout({
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${orbitron.variable} antialiased bg-black text-white min-h-screen`}
+        suppressHydrationWarning
       >
         <PerformanceMonitor />
         <ServiceWorkerRegister />
