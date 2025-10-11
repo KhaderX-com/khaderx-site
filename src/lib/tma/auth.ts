@@ -55,7 +55,7 @@ export async function verifyTelegramWebAppData(initData: string): Promise<boolea
 
         // Verify hash matches
         const isValid = calculatedHash === hash;
-        
+
         if (!isValid) {
             console.error('❌ Hash verification failed');
             console.error('Expected:', calculatedHash);
