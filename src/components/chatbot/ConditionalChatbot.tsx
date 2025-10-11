@@ -10,13 +10,13 @@ import Chatbot from './Chatbot';
 
 export default function ConditionalChatbot() {
     const pathname = usePathname();
-    
+
     // Hide chatbot on TMA vocab page
     const shouldHideChatbot = pathname === '/tma/vocab';
-    
+
     if (shouldHideChatbot) {
         return null;
     }
-    
+
     return <Chatbot />;
 }
