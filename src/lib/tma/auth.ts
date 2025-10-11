@@ -12,7 +12,7 @@ import crypto from 'crypto';
 export async function verifyTelegramWebAppData(initData: string): Promise<boolean> {
     try {
         const botToken = process.env.TELEGRAM_BOT_TOKEN;
-        
+
         if (!botToken) {
             console.error('❌ TELEGRAM_BOT_TOKEN not configured in environment variables');
             console.error('Please add it to Vercel: Settings → Environment Variables → TELEGRAM_BOT_TOKEN');
@@ -49,7 +49,7 @@ export async function verifyTelegramWebAppData(initData: string): Promise<boolea
 
         // Verify hash matches
         const isValid = calculatedHash === hash;
-        
+
         if (!isValid) {
             console.error('❌ Telegram signature verification failed');
             console.error('This usually means:');

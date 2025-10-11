@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
         // Verify Telegram initData signature
         console.log('🔐 Verifying Telegram authentication...');
         const isValid = await verifyTelegramWebAppData(initData);
-        
+
         if (!isValid) {
             console.error('❌ Telegram authentication failed');
             return NextResponse.json(
