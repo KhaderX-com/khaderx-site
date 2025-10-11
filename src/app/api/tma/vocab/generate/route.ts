@@ -12,43 +12,33 @@ import { generateVocabCards } from '@/lib/ai/gemini';
 
 export async function POST(request: NextRequest) {
     try {
-        // 1. Verify Telegram initData (optional in development)
+        // Get Telegram initData from header
         const initData = request.headers.get('x-telegram-init-data');
-        const isDevelopment = process.env.NODE_ENV === 'development';
-        const bypassAuth = process.env.BYPASS_AUTH === 'true';
 
-        console.log('🔍 Auth Debug Info:');
-        console.log('- NODE_ENV:', process.env.NODE_ENV);
-        console.log('- BYPASS_AUTH:', process.env.BYPASS_AUTH);
-        console.log('- Has initData:', !!initData);
-        console.log('- Has TELEGRAM_BOT_TOKEN:', !!process.env.TELEGRAM_BOT_TOKEN);
-        console.log('- Has GOOGLE_AI_KEY:', !!process.env.GOOGLE_AI_KEY);
-
-        // In development or when BYPASS_AUTH is true, allow without verification
-        if (isDevelopment || bypassAuth) {
-            console.log('🔓 Running in demo mode - auth bypassed');
-        } else if (initData) {
-            // In production with initData, verify it
-            console.log('🔐 Verifying Telegram data...');
-            const isValid = await verifyTelegramWebAppData(initData);
-            if (!isValid) {
-                console.error('❌ Telegram verification failed');
-                return NextResponse.json(
-                    { error: 'Invalid Telegram data' },
-                    { status: 401 }
-                );
-            }
-            console.log('✅ Telegram verification passed');
-        } else {
-            // No initData and not in bypass mode
-            console.error('❌ No initData provided and auth not bypassed');
+        // Production mode: Strict authentication required
+        if (!initData) {
+            console.error('❌ No Telegram init data provided');
             return NextResponse.json(
-                { error: 'Missing Telegram init data' },
+                { error: 'Telegram authentication required. Please open this app through Telegram.' },
                 { status: 401 }
             );
         }
 
-        // 2. Parse request body
+        // Verify Telegram initData signature
+        console.log('🔐 Verifying Telegram authentication...');
+        const isValid = await verifyTelegramWebAppData(initData);
+        
+        if (!isValid) {
+            console.error('❌ Telegram authentication failed');
+            return NextResponse.json(
+                { error: 'Invalid Telegram authentication. Please restart the app.' },
+                { status: 401 }
+            );
+        }
+
+        console.log('✅ Telegram authentication successful');
+
+        // Parse request body
         const body = await request.json();
         const { topic, difficulty, language } = body;
 

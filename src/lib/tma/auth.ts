@@ -11,17 +11,11 @@ import crypto from 'crypto';
  */
 export async function verifyTelegramWebAppData(initData: string): Promise<boolean> {
     try {
-        // Check if auth bypass is enabled
-        const bypassAuth = process.env.BYPASS_AUTH === 'true';
-        if (bypassAuth) {
-            console.log('⚠️ Auth verification bypassed (BYPASS_AUTH=true)');
-            return true;
-        }
-
         const botToken = process.env.TELEGRAM_BOT_TOKEN;
+        
         if (!botToken) {
             console.error('❌ TELEGRAM_BOT_TOKEN not configured in environment variables');
-            console.error('Add it to Vercel: Settings → Environment Variables');
+            console.error('Please add it to Vercel: Settings → Environment Variables → TELEGRAM_BOT_TOKEN');
             return false;
         }
 
@@ -31,7 +25,7 @@ export async function verifyTelegramWebAppData(initData: string): Promise<boolea
         urlParams.delete('hash');
 
         if (!hash) {
-            console.error('❌ No hash found in initData');
+            console.error('❌ No hash found in Telegram initData');
             return false;
         }
 
@@ -55,13 +49,15 @@ export async function verifyTelegramWebAppData(initData: string): Promise<boolea
 
         // Verify hash matches
         const isValid = calculatedHash === hash;
-
+        
         if (!isValid) {
-            console.error('❌ Hash verification failed');
-            console.error('Expected:', calculatedHash);
-            console.error('Received:', hash);
+            console.error('❌ Telegram signature verification failed');
+            console.error('This usually means:');
+            console.error('1. Wrong bot token in environment variables');
+            console.error('2. Mini app not configured for this bot in @BotFather');
+            console.error('3. Using wrong bot to open the app');
         } else {
-            console.log('✅ Telegram data verified successfully');
+            console.log('✅ Telegram signature verified successfully');
         }
 
         return isValid;
@@ -70,9 +66,7 @@ export async function verifyTelegramWebAppData(initData: string): Promise<boolea
         console.error('❌ Error verifying Telegram data:', error);
         return false;
     }
-}
-
-/**
+}/**
  * Extracts user data from Telegram initData
  */
 export function parseTelegramUser(initData: string) {
