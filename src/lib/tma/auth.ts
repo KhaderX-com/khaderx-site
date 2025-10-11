@@ -11,9 +11,17 @@ import crypto from 'crypto';
  */
 export async function verifyTelegramWebAppData(initData: string): Promise<boolean> {
     try {
+        // Check if auth bypass is enabled
+        const bypassAuth = process.env.BYPASS_AUTH === 'true';
+        if (bypassAuth) {
+            console.log('⚠️ Auth verification bypassed (BYPASS_AUTH=true)');
+            return true;
+        }
+
         const botToken = process.env.TELEGRAM_BOT_TOKEN;
         if (!botToken) {
-            console.error('TELEGRAM_BOT_TOKEN not configured');
+            console.error('❌ TELEGRAM_BOT_TOKEN not configured in environment variables');
+            console.error('Add it to Vercel: Settings → Environment Variables');
             return false;
         }
 
@@ -23,6 +31,7 @@ export async function verifyTelegramWebAppData(initData: string): Promise<boolea
         urlParams.delete('hash');
 
         if (!hash) {
+            console.error('❌ No hash found in initData');
             return false;
         }
 
@@ -45,10 +54,20 @@ export async function verifyTelegramWebAppData(initData: string): Promise<boolea
             .digest('hex');
 
         // Verify hash matches
-        return calculatedHash === hash;
+        const isValid = calculatedHash === hash;
+        
+        if (!isValid) {
+            console.error('❌ Hash verification failed');
+            console.error('Expected:', calculatedHash);
+            console.error('Received:', hash);
+        } else {
+            console.log('✅ Telegram data verified successfully');
+        }
+
+        return isValid;
 
     } catch (error) {
-        console.error('Error verifying Telegram data:', error);
+        console.error('❌ Error verifying Telegram data:', error);
         return false;
     }
 }
