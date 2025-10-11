@@ -37,13 +37,13 @@ export function VocabGenerator({ onGenerate, isGenerating }: VocabGeneratorProps
     const [language, setLanguage] = useState('en');
 
     // Initialize Monetag ad hook
-    const { showInAppInterstitial } = useMonetagAd();
+    const { showInterstitialAd, canShowAd } = useMonetagAd();
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         if (topic.trim()) {
-            // Trigger In-app Interstitial ad before generating cards
-            showInAppInterstitial();
+            // Trigger Interstitial ad ONLY when user clicks (with 30s cooldown)
+            showInterstitialAd();
 
             // Call the original onGenerate function
             onGenerate({ topic: topic.trim(), difficulty, language });
@@ -138,6 +138,13 @@ export function VocabGenerator({ onGenerate, isGenerating }: VocabGeneratorProps
                     </span>
                 )}
             </button>
+
+            {/* Ad Cooldown Indicator (Development Only) */}
+            {!canShowAd && process.env.NODE_ENV === 'development' && (
+                <div className="text-center text-xs text-yellow-400 mt-2">
+                    ⏳ Ad cooldown active (30s between ads)
+                </div>
+            )}
         </form>
     );
 }
