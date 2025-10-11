@@ -31,7 +31,7 @@ export function FlashCard({
         <div className="space-y-4 w-full">
             {/* Card Container */}
             <div
-                className="relative w-full cursor-pointer perspective-1000 min-h-[400px] max-h-[600px] h-auto"
+                className="relative w-full cursor-pointer perspective-1000 h-[450px] sm:h-[500px] md:h-[400px]"
                 onClick={handleFlip}
             >
                 <div
