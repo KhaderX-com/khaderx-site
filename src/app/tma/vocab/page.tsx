@@ -15,6 +15,9 @@ export default function VocabTMAPage() {
   const { isReady, user, isInTelegram, initData, webApp, haptic } = useTelegramWebApp();
   const { generateCards, clearCards, isGenerating, error, currentCards } = useVocabGenerator(initData);
 
+  // Check if in localhost development mode
+  const isLocalhost = typeof window !== 'undefined' && window.location.hostname === 'localhost';
+
   const handleGenerate = async (params: {
     topic: string;
     difficulty: 'beginner' | 'intermediate' | 'advanced';
@@ -96,15 +99,20 @@ export default function VocabTMAPage() {
         </div>
       </div>
 
-      {/* Demo Mode Info */}
+      {/* Development/Demo Mode Info */}
       {!isInTelegram && (
         <div className="mb-6 p-4 rounded-lg bg-blue-500/10 border border-blue-500/30 text-blue-300 text-sm">
           <div className="flex items-start gap-3">
-            <span className="text-xl">ℹ️</span>
+            <span className="text-xl">{isLocalhost ? '🔧' : 'ℹ️'}</span>
             <div>
-              <p className="font-medium mb-1">Demo Mode Active</p>
+              <p className="font-medium mb-1">
+                {isLocalhost ? 'Development Mode' : 'Demo Mode'}
+              </p>
               <p className="text-blue-400/80">
-                You&apos;re testing without Telegram. Open this in Telegram for the full experience!
+                {isLocalhost
+                  ? 'Testing on localhost with authentication bypass. This will NOT work in production.'
+                  : "You're testing without Telegram. Open this in Telegram for the full experience!"
+                }
               </p>
             </div>
           </div>

@@ -13,7 +13,14 @@ import { generateVocabCards } from '@/lib/ai/gemini';
 export async function POST(request: NextRequest) {
     try {
         // Get Telegram initData from header
-        const initData = request.headers.get('x-telegram-init-data');
+        let initData = request.headers.get('x-telegram-init-data');
+
+        // Development mode: Allow bypass for localhost testing
+        const isDev = process.env.NODE_ENV === 'development';
+        if (isDev && !initData) {
+            console.log('🔧 Development mode: Using dev-bypass for testing');
+            initData = 'dev-bypass';
+        }
 
         // Production mode: Strict authentication required
         if (!initData) {

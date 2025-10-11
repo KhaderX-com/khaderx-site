@@ -6,11 +6,24 @@
 import crypto from 'crypto';
 
 /**
+ * Check if we're in development mode (localhost)
+ */
+function isDevelopmentMode(): boolean {
+    return process.env.NODE_ENV === 'development';
+}
+
+/**
  * Verifies Telegram WebApp initData
  * @see https://core.telegram.org/bots/webapps#validating-data-received-via-the-mini-app
  */
 export async function verifyTelegramWebAppData(initData: string): Promise<boolean> {
     try {
+        // Development mode: Allow bypass for testing
+        if (isDevelopmentMode() && initData === 'dev-bypass') {
+            console.log('🔧 Development mode: Bypassing authentication');
+            return true;
+        }
+
         const botToken = process.env.TELEGRAM_BOT_TOKEN;
 
         if (!botToken) {

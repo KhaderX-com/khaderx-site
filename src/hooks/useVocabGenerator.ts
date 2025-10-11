@@ -23,11 +23,15 @@ export function useVocabGenerator(initData: string) {
         setError(null);
 
         try {
+            // Use 'dev-bypass' in development if no initData
+            const isDev = typeof window !== 'undefined' && window.location.hostname === 'localhost';
+            const authData = initData || (isDev ? 'dev-bypass' : '');
+
             const response = await fetch('/api/tma/vocab/generate', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'x-telegram-init-data': initData,
+                    'x-telegram-init-data': authData,
                 },
                 body: JSON.stringify(params),
             });
