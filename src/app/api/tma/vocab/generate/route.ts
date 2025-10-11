@@ -15,20 +15,23 @@ export async function POST(request: NextRequest) {
         // 1. Verify Telegram initData (optional in development)
         const initData = request.headers.get('x-telegram-init-data');
         const isDevelopment = process.env.NODE_ENV === 'development';
+        const bypassAuth = process.env.BYPASS_AUTH === 'true';
 
-        // In production, require valid Telegram data
-        // In development, allow demo mode
-        if (!isDevelopment && !initData) {
-            return NextResponse.json(
-                { error: 'Missing Telegram init data' },
-                { status: 401 }
-            );
-        }
+        // In development or when BYPASS_AUTH is true, allow without verification
+        if (isDevelopment || bypassAuth) {
+            console.log('🔓 Running in demo mode - auth bypassed');
+        } else {
+            // In production, require valid Telegram data
+            if (!initData) {
+                return NextResponse.json(
+                    { error: 'Missing Telegram init data' },
+                    { status: 401 }
+                );
+            }
 
-        // Verify if initData is provided
-        if (initData) {
+            // Verify initData
             const isValid = await verifyTelegramWebAppData(initData);
-            if (!isValid && !isDevelopment) {
+            if (!isValid) {
                 return NextResponse.json(
                     { error: 'Invalid Telegram data' },
                     { status: 401 }

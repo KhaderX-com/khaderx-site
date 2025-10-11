@@ -92,6 +92,17 @@ export function useTelegramWebApp() {
         }
     }, []);
 
+    // Utility functions for haptic feedback
+    const haptic = {
+        light: () => webApp?.HapticFeedback.impactOccurred('light'),
+        medium: () => webApp?.HapticFeedback.impactOccurred('medium'),
+        heavy: () => webApp?.HapticFeedback.impactOccurred('heavy'),
+        success: () => webApp?.HapticFeedback.notificationOccurred('success'),
+        error: () => webApp?.HapticFeedback.notificationOccurred('error'),
+        warning: () => webApp?.HapticFeedback.notificationOccurred('warning'),
+        selection: () => webApp?.HapticFeedback.selectionChanged(),
+    };
+
     return {
         webApp,
         isReady,
@@ -99,5 +110,6 @@ export function useTelegramWebApp() {
         isInTelegram: !!webApp,
         theme: webApp?.themeParams || {},
         initData: webApp?.initData || '',
+        haptic,
     };
 }

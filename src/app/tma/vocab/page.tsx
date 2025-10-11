@@ -5,13 +5,14 @@
 
 'use client';
 
+import { useEffect } from 'react';
 import { useTelegramWebApp } from '@/hooks/useTelegramWebApp';
 import { useVocabGenerator } from '@/hooks/useVocabGenerator';
 import { VocabGenerator } from '@/components/vocab/VocabGenerator';
 import { FlashCard } from '@/components/vocab/FlashCard';
 
 export default function VocabTMAPage() {
-  const { isReady, user, isInTelegram, initData } = useTelegramWebApp();
+  const { isReady, user, isInTelegram, initData, webApp, haptic } = useTelegramWebApp();
   const { generateCards, clearCards, isGenerating, error, currentCards } = useVocabGenerator(initData);
 
   const handleGenerate = async (params: {
@@ -19,12 +20,47 @@ export default function VocabTMAPage() {
     difficulty: 'beginner' | 'intermediate' | 'advanced';
     language: string;
   }) => {
-    await generateCards(params);
+    // Haptic feedback on generate
+    haptic?.medium();
+    
+    const result = await generateCards(params);
+    
+    // Success or error haptic
+    if (result && result.length > 0) {
+      haptic?.success();
+    } else if (error) {
+      haptic?.error();
+    }
   };
 
   const handleRegenerate = () => {
+    haptic?.light();
     clearCards();
   };
+
+  // Main Button and Back Button integration
+  useEffect(() => {
+    if (webApp && isInTelegram) {
+      const handleBackClick = () => {
+        haptic?.light();
+        clearCards();
+      };
+
+      // Show back button when cards are displayed
+      if (currentCards.length > 0) {
+        webApp.BackButton.show();
+        webApp.BackButton.onClick(handleBackClick);
+      } else {
+        webApp.BackButton.hide();
+      }
+
+      // Cleanup
+      return () => {
+        webApp.BackButton.offClick(handleBackClick);
+        webApp.BackButton.hide();
+      };
+    }
+  }, [webApp, isInTelegram, currentCards.length, haptic, clearCards]);
 
   if (!isReady) {
     return (

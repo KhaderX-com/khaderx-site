@@ -7,6 +7,7 @@
 
 import { useState } from 'react';
 import type { VocabCard } from '@/lib/schema/vocab';
+import { useTelegramWebApp } from '@/hooks/useTelegramWebApp';
 
 interface FlashCardProps {
     card: VocabCard;
@@ -18,8 +19,11 @@ export function FlashCard({
     cardNumber
 }: FlashCardProps) {
     const [isFlipped, setIsFlipped] = useState(false);
+    const { haptic } = useTelegramWebApp();
 
     const handleFlip = () => {
+        // Haptic feedback on flip
+        haptic?.light();
         setIsFlipped(!isFlipped);
     };
 

@@ -6,7 +6,9 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import type { VocabCard, GenerateVocabParams } from '@/lib/schema/vocab';
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || '');
+// Support both GEMINI_API_KEY and GOOGLE_AI_KEY environment variables
+const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_AI_KEY || '';
+const genAI = new GoogleGenerativeAI(apiKey);
 
 /**
  * Generate 3 business vocabulary flashcards at once
